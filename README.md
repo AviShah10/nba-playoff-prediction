@@ -72,5 +72,5 @@ Divyesh - Structured the algorithm and defined which methods are useful in relat
 
 Param - Worked on finishing the Gantt chart and assisted in the ideation for the results and Discussion
 
-Saahas - Lead the overall discussion and results for the project and figured out the qualitative metrics that we will use to predict how useful the algorithm will be
+Saahas - Lead the overall discussion and results for the project and figured out the quantitative metrics that we will use to predict how useful the algorithm will be
 
