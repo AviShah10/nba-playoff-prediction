@@ -34,13 +34,13 @@ We have currently looked at 4 possible supervised-learning models that could be 
 
 There are a large number of factors that dictate whether an NBA team will make it to the playoffs or not. Some factors cannot be shown within the statistics that we will put into our algorithms, such as team chemistry, mid-season trades, and morale. Therefore, most of the analysis that we will do will be purely quantitative and will contain data from previous seasons to counteract qualitative factors that can cause outliers in team performances. Using this purely quantitative data we can have the following potential results:
 
-Team overperforms: This result occurs when a team performs better during the second half of the season than what the algorithm predicts. This result could occur for any number of reasons ranging from an addition of a star player to a change in coaching staff to a change in team chemistry. This result is usually not predicted by ML algorithms, but does not often occur within basketball. For example, our algorithm can predict that a team will make it to the playoffs based on first half statistics, and a team may not make the playoffs due to a decreased performance during the second half.
+Team overperforms: This result occurs when a team performs better during the second half of the season than what the algorithm predicts (i.e. makes playoffs when algorithm predicts no playoffs).
 
-Team underperforms: When this result occurs, a team performs worse during the second half of the season than what the algorithm predicts.
+Team underperforms: When this result occurs, a team performs worse during the second half of the season than what the algorithm predicts (i.e. misses playoffs when algorithm predicts playoffs).
 
 Team performs at par: Team performs similar to how the algorithm predicts. 
 	
-A couple metrics we will explore are, home team advantage, win percentage, rebounds, assists, turnovers, steals, blocks, plus/minus score, offensive rating, defensive rating, and true shooting percentage.
+Some  metrics we will explore are home team advantage, win percentage, rebounds, assists, turnovers, steals, blocks, plus/minus score, offensive rating, defensive rating, and true shooting percentage.
 
 
 ## Gannt Chart/Timeline:
