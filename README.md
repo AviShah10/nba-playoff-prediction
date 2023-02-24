@@ -9,7 +9,7 @@ The NBA is the world’s most competitive professional basketball league and eac
 ## Dataset
 
 Kaggle Dataset: https://www.kaggle.com/datasets/wyattowalsh/basketball/discussion
-The game.csv file in this dataset has information on all basketball games from 1946 until January 2023. We will only use the last 23 years of data. This dataset includes nearly every statistical metric (W/L, MIN, PTS, REB, AST, TOV, PF, +/-, and more), all of which can be used for our algorithms.
+The game.csv file in this dataset has information on all basketball games from 1946 until January 2023. We will only use the last 23 years of data. This dataset includes nearly every statistical metric (W/L, MIN, PTS, REB, AST, PF, +/-, and more), all of which can be used for our algorithms.
 
 NBA Website: https://www.nba.com/stats/teams/boxscores?dir=A&sort=TEAM_NAME
 This dataset has all official games and stats by the NBA. Any games that cannot be accessed on the Kaggle Dataset (i.e. more recent games in 2023) can be loaded here.
@@ -50,7 +50,7 @@ Some metrics we will explore are home team advantage, win percentage, rebounds, 
 
 ## Video:
 
-(INSERT LINK HERE)
+[(INSERT LINK HERE)](https://youtu.be/DT_ijjrB2e8)
 
 
 ## Scholarly References:
