@@ -3,15 +3,13 @@
 
 ## Introduction:
 
-The NBA is the world’s most competitive professional basketball league and each of its 30 teams try to win the NBA championship every season. Our project goal is to create a model to accurately predict which NBA teams have the best chance to make the NBA playoffs and win the championship.
-
-NBA teams all want to make the playoffs to get a chance to win the championship, but teams would like to know where they stand in relation other teams at the halfway point of the season. Our team is looking to use machine learning to predict the ranking of all teams at the end of the season by the halfway point, and find common traits in success, so that teams can know what to improve to make the playoffs, or what they need to do to remain in the playoff picture.
+The NBA is the world’s most competitive professional basketball league and each of its 30 teams try to win the NBA championship every season. Our project goal is to create a model to accurately predict which NBA teams have the best chance to make the NBA playoffs and win the championship. Our team is looking to use machine learning to predict the ranking of all teams at the end of the season by the halfway point, and find common traits in success, so that teams can know what to improve to make the playoffs, or what they need to do to remain in the playoff picture.
 
 
 ## Dataset
 
 Kaggle Dataset: https://www.kaggle.com/datasets/wyattowalsh/basketball/discussion
-The game.csv file in this dataset has information on all basketball games from 1946 until January 2023. We will only use the last 23 years of data. This dataset includes nearly every statistical metric (W/L, MIN, PTS, FGM, REB, AST, TOV, PF, +/-, and more) all of which can be used for our algorithms.
+The game.csv file in this dataset has information on all basketball games from 1946 until January 2023. We will only use the last 23 years of data. This dataset includes nearly every statistical metric (W/L, MIN, PTS, REB, AST, TOV, PF, +/-, and more), all of which can be used for our algorithms.
 
 NBA Website: https://www.nba.com/stats/teams/boxscores?dir=A&sort=TEAM_NAME
 This dataset has all official games and stats by the NBA. Any games that cannot be accessed on the Kaggle Dataset (i.e. more recent games in 2023) can be loaded here.
@@ -19,25 +17,25 @@ This dataset has all official games and stats by the NBA. Any games that cannot 
 
 ## Methods:
 
-We have currently looked at 4 possible supervised-learning models that could be used for this project. Out of the 4, we are looking at implementing 2 or 3 models. We are still doing more research to figure out which models would be the best for us. 
+We have looked at 4 possible supervised-learning models that could be used for this project. Out of the 4, we are looking at implementing 2 or 3 models. We are still researching which models would be the best for us. 
 
-  Logistic Regression: This model  gives us concrete binary results for events, based on input variables.
+  Logistic Regression: Gives us concrete binary results for events, based on input variables.
 
-  SVM: This model allows for high dimensional feature vectors to predict game results. 
+  SVM: Allows for high dimensional feature vectors to predict game results. 
 
-  K-Nearest Neighbor: This model allows for easy clustering of features and thus allows for a regression model to be created allowing for prediction of certain variables that could be used to further predict the outcome of games. 
+  K-Nearest Neighbor: Allows for easy clustering of features and thus allows for a regression model to be created allowing for prediction of certain variables that could be used to further predict the outcome of games. 
 
-  Random Forest: This model allows for a combination of several decision trees into a single model, letting us look at multiple events affecting the final prediction of which teams would make the payoff.
+  Random Forest: Allows for a combination of several decision trees into a single model, letting us look at multiple events affecting the final prediction of which teams would make the payoff.
 
-There are many factors that could dictate whether an NBA team will make it to the playoffs or not. Some factors cannot be shown within statistics that we will put into our algorithm (such as team chemistry, mid-season trades, and morale). Therefore, the data we feed our models will be purely quantitative and use a large sample size across many seasons to counteract qualitative factors that can cause outliers in performances.
+There are many factors that could dictate an NBA team making the playoffs or not. Some cannot be shown via quantitative statistics in our algorithm (such as chemistry, trades, and morale). Therefore, the data we feed our models will be purely quantitative and use a large sample size across many seasons to counteract qualitative factors that can cause outliers in performances.
 
 ## Predicted Outcomes:
 
-Using this purely quantitative data in our models we can have the following potential results from our analysis:
+Using this data in our models we can have the following potential results from our analysis:
 
-Team overperforms: Team performs better during the second half of the season than what the algorithm predicts (i.e. makes playoffs when algorithm predicts no playoffs).
+Team overperforms: Team performs better during the second half of season than what the algorithm predicts (i.e. makes playoffs when algorithm predicts no playoffs).
 
-Team underperforms: Team performs worse during the second half of the season than what the algorithm predicts (i.e. misses playoffs when algorithm predicts playoffs).
+Team underperforms: Team performs worse during the second half of season than what the algorithm predicts (i.e. misses playoffs when algorithm predicts playoffs).
 
 Team performs at par: Team performs similar to how the algorithm predicts. 
 	
