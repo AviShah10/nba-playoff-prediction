@@ -64,13 +64,12 @@ Wang, Jingru, and Qishi Fan. “Application of Machine Learning on NBA Data Sets
 
 ## Contributions:
 
-Samuel - Found 3 references of similar studies that we can leverage for use throughout the project proposal. Also found a couple datasets we can use for training data
+Samuel - Found 3 references of similar studies that we can leverage for use throughout the project proposal. Also found a couple datasets we can use for training data and edited github page (was in video)
 
-Avi - Defined the problem definition and cummulated background knowledge to provide to foundation for our algorithm. Also created our github repository. 
+Avi - Defined the problem definition and cummulated background knowledge to provide to foundation for our algorithm. Also created our github repository and worked on script/slides for the video and github page
 
-Divyesh - Structured the algorithm and defined which methods are useful in relation to the libraries and data available
+Divyesh - Structured the algorithm and defined which methods are useful in relation to the libraries and data available, and edited all parts of page for cohesiveness and to reach word count (was in video)
 
-Param - Worked on finishing the Gantt chart and assisted in the ideation for the results and Discussion
+Param - Worked on finishing the Gantt chart and assisted in the ideation for the results and Discussion. Discussed overall purpose and useful applications of algorithm (was in video)
 
-Saahas - Lead the overall discussion and results for the project and figured out the quantitative metrics that we will use to predict how useful the algorithm will be
-
+Saahas - Lead the overall discussion and results for the project and figured out the quantitative metrics that we will use to predict how useful the algorithm will be, and worked on slides/script for video
