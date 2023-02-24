@@ -45,7 +45,8 @@ Some  metrics we will explore are home team advantage, win percentage, rebounds,
 
 ## Gannt Chart/Timeline:
 
-(INSERT SCREENSHOT OF COMPLETED GANNT CHART HERE)
+![image](https://user-images.githubusercontent.com/55326680/221089383-a7bd3974-044a-426d-a906-6c627b50a20c.png)
+
 
 
 ## Video:
