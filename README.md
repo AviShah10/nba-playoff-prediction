@@ -50,7 +50,7 @@ Some metrics we will explore in our analysis are home team advantage, win percen
 
 ## Video:
 
-[(YouTube Link to 3-min Video)](https://youtu.be/DT_ijjrB2e8)
+[(YouTube Link to 3-min Video)](https://youtu.be/IXE98mcphmQ)
 
 
 ## Scholarly References:
