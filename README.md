@@ -3,7 +3,7 @@
 
 ## Introduction:
 
-The NBA is the world’s most competitive professional basketball league and each of its 30 teams try to win the NBA championship every season. Our project goal is to create a model to accurately predict which NBA teams have the best chance to make the NBA playoffs and win the championship. Our team is looking to use machine learning to predict the ranking of all teams at the end of the season by the halfway point, and find common traits in success, so that teams can know what to improve to make the playoffs, or what they need to do to remain in the playoff picture.
+The NBA is the world’s most competitive professional basketball league and each of its 30 teams try to win the NBA championship every season. Our project goal is to create a model to accurately predict which NBA teams have the best chance to make the NBA playoffs and win the championship. Our team is looking to use machine learning to predict the end ranking of teams by the halfway point, and find common traits in success so that teams can know what to improve to make the playoffs, or what they need to do to remain in the playoff picture.
 
 
 ## Dataset
@@ -31,15 +31,15 @@ There are many factors that could dictate an NBA team making the playoffs or not
 
 ## Predicted Outcomes:
 
-Using this data in our models we can have the following potential results from our analysis:
+Using this data in our models we can have the following potential results when comparing with our model's predictions:
 
-Team overperforms: Team performs better during the second half of season than what the algorithm predicts (i.e. makes playoffs when algorithm predicts no playoffs).
+Team overperforms (i.e. makes playoffs when algorithm predicts no playoffs).
 
-Team underperforms: Team performs worse during the second half of season than what the algorithm predicts (i.e. misses playoffs when algorithm predicts playoffs).
+Team underperforms (i.e. misses playoffs when algorithm predicts playoffs).
 
-Team performs at par: Team performs similar to how the algorithm predicts. 
+Team performs at par (Team performs similar to how the algorithm predicts). 
 	
-Some metrics we will explore are home team advantage, win percentage, rebounds, assists, turnovers, steals, blocks, plus/minus score, offensive rating, defensive rating, and true shooting percentage.
+Some metrics we will explore in our analysis are home team advantage, win percentage, rebounds, assists, turnovers, offensive/defensive rating, etc. and based on teams' actual/predicted success we can advise on which metrics must be improved on to maximize playoff likelihood.
 
 
 ## Gannt Chart/Timeline:
