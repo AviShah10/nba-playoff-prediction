@@ -19,20 +19,20 @@ This dataset has all games and stats as presented by the NBA. Any games that can
 
 ## Methods:
 
-We have currently looked at 4 possible supervised-learning models that could be used for this project. Out of the 4, we are looking at implementing 2 or 3 models. We are still doing more research to figure out which models would be the best for us. 
+We have currently looked at 4 possible supervised-learning models that could be used for this project. We are looking at implementing 2 or 3 models. We are still doing more research to figure out which models would be the best for us. 
 
   Logistic Regression: This model  gives us concrete binary results for events, based on input variables.
 
   SVM: This model allows for high dimensional feature vectors to predict game results. 
 
-  K-Nearest Neighbor: This model allows for easy clustering of features and thus allows for a regression model to be created allowing for prediction of certain variables that could be used to further predict the outcome of games. 
+  K-Nearest Neighbor: This model allows for easy clustering of features and creation of a regression model to predict certain variables that could be used to further predict the outcome of games. 
 
-  Random Forest: This model allows for a combination of several decision trees into a single model, letting us look at multiple events affecting the final prediction of which teams would make the payoff.
+  Random Forest: This model allows for a combination of several decision trees into a single model, letting us look at multiple events affecting the final prediction of which teams would make the payoffs.
 
 
 ## Predicted Outcomes:
 
-There are a large number of factors that dictate whether an NBA team will make it to the playoffs or not. Some factors cannot be shown within the statistics that we will put into our algorithms, such as team chemistry, mid-season trades, and morale. Therefore, most of the analysis that we will do will be purely quantitative and will contain data from previous seasons to counteract qualitative factors that can cause outliers in team performances. Using this purely quantitative data we can have the following potential results:
+There are a large number of factors that dictate whether an NBA team will make it to the playoffs or not. Some factors cannot be shown within the statistics that we will put into our algorithms, such as team chemistry, mid-season trades, and morale. Therefore, most of our analysis will be purely quantitative and will contain data from previous seasons to counteract qualitative factors that can cause outliers in team performances. Using this purely quantitative data we can have the following potential results:
 
 Team overperforms: This result occurs when a team performs better during the second half of the season than what the algorithm predicts (i.e. makes playoffs when algorithm predicts no playoffs).
 
