@@ -65,7 +65,7 @@ dataset2013 = gamesDataframe[gamesDataframe['season_id'] == 22013]
 dataset2014 = gamesDataframe[gamesDataframe['season_id'] == 22014]
 dataset2015 = gamesDataframe[gamesDataframe['season_id'] == 22015]
 dataset2016 = gamesDataframe[gamesDataframe['season_id'] == 22016]
-# dataset2017 = gamesDataframe[gamesDataframe['season_id'] == 22017]
+# dataset2017 = gamesDataframe[gamesDataframe['season_id'] == 22017] #2017 data doesn't exist
 dataset2018 = gamesDataframe[gamesDataframe['season_id'] == 22018]
 dataset2019 = gamesDataframe[gamesDataframe['season_id'] == 22019]
 dataset2020 = gamesDataframe[gamesDataframe['season_id'] == 22020]
@@ -90,7 +90,7 @@ dataset2013.to_csv('./yearly_dataset/dataset2013.csv')
 dataset2014.to_csv('./yearly_dataset/dataset2014.csv')
 dataset2015.to_csv('./yearly_dataset/dataset2015.csv')
 dataset2016.to_csv('./yearly_dataset/dataset2016.csv')
-# dataset2017.to_csv('./yearly_dataset/dataset2017.csv')
+# dataset2017.to_csv('./yearly_dataset/dataset2017.csv') #2017 data doesn't exist
 dataset2018.to_csv('./yearly_dataset/dataset2018.csv')
 dataset2019.to_csv('./yearly_dataset/dataset2019.csv')
 dataset2020.to_csv('./yearly_dataset/dataset2020.csv')
@@ -119,14 +119,44 @@ teamList = ['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets'
             'Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs',
             'Toronto Raptors','Utah Jazz','Washington Wizards']
 
-# Making a list of all the teams codes in the NBA
-teamList = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 'HOU',
-            'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 'OKC', 'ORL', 
-            'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
+# Making a list of all the teams abbrevs in the NBA
+teamList = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
+            'HOU', 'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 
+            'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
+
+teamCodes = [1610612737, 1610612738, 1610612751, 1610612766, 1610612741, 1610612739, 1610612742, 1610612743, 1610612765, 1610612744, 
+             1610612745, 1610612754, 1610612746, 1610612747, 1610612763, 1610612748, 1610612749, 1610612750, 1610612740, 1610612752,
+             1610612760, 1610612753, 1610612755, 1610612756, 1610612758, 1610612759, 1610612761, 1610612762, 1610612764]
 
 # Making a dictionary to store the names of the teams, and number of rows in each dataset
 countDictionary = {}
 
+#Uses helper functions in statgetter to divide each season by team, average them, then split by conference
+east2000, west2000 = statgetter.getTeamAverages(dataset2000)
+east2001, west2001 = statgetter.getTeamAverages(dataset2001)
+east2002, west2002 = statgetter.getTeamAverages(dataset2002)
+east2003, west2003 = statgetter.getTeamAverages(dataset2003)
+east2004, west2004 = statgetter.getTeamAverages(dataset2004)
+east2005, west2005 = statgetter.getTeamAverages(dataset2005)
+east2006, west2006 = statgetter.getTeamAverages(dataset2006)
+east2007, west2007 = statgetter.getTeamAverages(dataset2007)
+east2008, west2008 = statgetter.getTeamAverages(dataset2008)
+east2009, west2009 = statgetter.getTeamAverages(dataset2009)
+east2010, west2010 = statgetter.getTeamAverages(dataset2010)
+east2011, west2011 = statgetter.getTeamAverages(dataset2011)
+east2012, west2012 = statgetter.getTeamAverages(dataset2012)
+east2013, west2013 = statgetter.getTeamAverages(dataset2013)
+east2014, west2014 = statgetter.getTeamAverages(dataset2014)
+east2015, west2015 = statgetter.getTeamAverages(dataset2015)
+east2016, west2016 = statgetter.getTeamAverages(dataset2016)
+east2018, west2018 = statgetter.getTeamAverages(dataset2018)
+east2019, west2019 = statgetter.getTeamAverages(dataset2019)
+east2020, west2020 = statgetter.getTeamAverages(dataset2020)
+east2021, west2021 = statgetter.getTeamAverages(dataset2021)
+east2022, west2022 = statgetter.getTeamAverages(dataset2022)
+
+
+#OLD CODE: may not be needed anymore
 # # Creating a datframe for every team that contains data from all the years
 # Atlanta_Hawks = pd.DataFrame(columns = gamesColumns)
 # Boston_Celtics = pd.DataFrame(columns = gamesColumns)
@@ -181,93 +211,4 @@ countDictionary = {}
 #                 countDictionary['Brooklyn Nets'] += 1
 #             else:
 #                 countDictionary['Brooklyn Nets'] = 1
-
-east2000, west2000 = statgetter.getTeamAverages(dataset2000)
-
-# # function takes in dataframe of season's games,
-# # First divides by each team
-# # Next splits by first half of the season
-# # Then averages all stats during first half of said season
-# # Finally recombines into East/West dataframes for team avg stats for that season
-# def getTeamAverages(seasonDataframe: pd.DataFrame):
-#     teamList = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 'HOU',
-#             'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 'OKC', 'ORL', 
-#             'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
-    
-#     #Creates dict of all the teams' games for that season
-#     teamStats = {}
-
-#     #IMPORTANT: THESE ARE THE STATS WE WILL BE GETTING!!!
-#     statsColumns = ['WLPCT', 'MATCHUP', 'FGM', 'FGA', 'FGPCT', 'FG3M', 'FG3A', 'FG3PCT', 'FTM', 'FTA', 'FTPCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PM']
-
-#     #Loop through each team and create entry in teamStats dictionary
-#     for team in teamList:
-#         teamStats[team] = seasonDataframe[seasonDataframe['team_id_home'] == team or seasonDataframe['team_id_away'] == team]
-#         #temporary variable to store team's dataframe
-#         df = teamStats[team]
-
-#         #empty dataframe to fill with first half of season's games
-#         temp = pd.DataFrame(columns = statsColumns)
-
-#         #Loop through team's first half of games, take stats from home or away columns
-#         i = 0 #counter for num games
-#         for homeid in df['team_id_home']:
-#             if homeid == team:
-#                 temp.append(getHomeStats(df.iloc[[i]]))
-#             else:
-#                 temp.append(getAwayStats(df.iloc[[i]]))
-
-#             i += 1
-#             #only takes first half of the season's games (88 game season)
-#             if i >= 44:
-#                 break
-#             #Also thinking about doing home and away win percentage as separate columns?
-
-#         teamStats[team] = temp
-
-#     #Average the columns into new dataframe
-    
-#     #Separate quick calculation for win percentage
-
-#     eastAverages = 0
-#     westAverages = 0
-
-#     return eastAverages, westAverages
-
-# # Helper function to get stats from csv if team is at home. Win is 1, loss is 0
-# def getHomeStats(homegame: pd.DataFrame):
-#     gamedf = homegame[['wl_home', 'matcuhp_home', 'fgm_home', 'fga_home', 'fg_pct_home', 
-#                        'fg3m_home', 'fg3a_home', 'fg3_pct_home', 'oreb_home', 'dreb_home',
-#                        'ast_home', 'stl_home', 'blk_home', 'tov_home', 'pf_home', 'pts_home',
-#                        'plus_minus_home']]
-#     statsColumns = ['WLPCT', 'MATCHUP', 'FGM', 'FGA', 'FGPCT', 'FG3M', 'FG3A', 'FG3PCT', 'FTM', 'FTA', 'FTPCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PM']
-#     gamedf.columns = statsColumns
-
-#     if gamedf['WLPCT'] == 'L':
-#         gamedf['WLPCT'] = 0
-#     else:
-#         gamedf['WLPCT'] = 1
-
-#     #0 is defined as home
-#     gamedf['MATCHUP'] = 0
-
-#     return gamedf
-
-# # Helper function to get stats from csv if team is at home. Win is 1, loss is 0
-# def getAwayStats(awaygame: pd.DataFrame):
-#     gamedf = awaygame[['wl_away', 'matcuhp_away', 'fgm_away', 'fga_away', 'fg_pct_away', 
-#                        'fg3m_away', 'fg3a_away', 'fg3_pct_away', 'oreb_away', 'dreb_away',
-#                        'ast_away', 'stl_away', 'blk_away', 'tov_away', 'pf_away', 'pts_away',
-#                        'plus_minus_away']]
-#     statsColumns = ['WLPCT', 'MATCHUP', 'FGM', 'FGA', 'FGPCT', 'FG3M', 'FG3A', 'FG3PCT', 'FTM', 'FTA', 'FTPCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PM']
-#     gamedf.columns = statsColumns
-
-#     if gamedf['WLPCT'] == 'L':
-#         gamedf['WLPCT'] = 0
-#     else:
-#         gamedf['WLPCT'] = 1
-
-#     #1 is defined as away
-#     gamedf['MATCHUP'] = 1
-#     return gamedf
 
