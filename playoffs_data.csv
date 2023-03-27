@@ -1,0 +1,686 @@
+year,team,is_playoffs_team
+2000,Sacramento Kings,1
+2000,Detroit Pistons,1
+2000,Dallas Mavericks,0
+2000,Indiana Pacers,1
+2000,Milwaukee Bucks,1
+2000,Los Angeles Lakers,1
+2000,Orlando Magic,0
+2000,Houston Rockets,0
+2000,Boston Celtics,0
+2000,Seattle SuperSonics,1
+2000,Denver Nuggets,0
+2000,Phoenix Suns,1
+2000,Minnesota Timberwolves,1
+2000,Charlotte Hornets,1
+2000,New Jersey Nets,0
+2000,Portland Trail Blazers,1
+2000,Toronto Raptors,1
+2000,Cleveland Cavaliers,0
+2000,Washington Wizards,0
+2000,Utah Jazz,1
+2000,San Antonio Spurs,1
+2000,Golden State Warriors,0
+2000,Philadelphia 76ers,1
+2000,Miami Heat,1
+2000,Atlanta Hawks,0
+2000,Vancouver Grizzlies,0
+2000,New York Knicks,1
+2000,Los Angeles Clippers,0
+2000,Chicago Bulls,0
+2001,Sacramento Kings,1
+2001,Milwaukee Bucks,1
+2001,Los Angeles Lakers,1
+2001,Dallas Mavericks,1
+2001,Toronto Raptors,1
+2001,Orlando Magic,1
+2001,Seattle SuperSonics,0
+2001,Minnesota Timberwolves,1
+2001,Houston Rockets,0
+2001,Utah Jazz,1
+2001,Denver Nuggets,0
+2001,San Antonio Spurs,1
+2001,Detroit Pistons,0
+2001,Portland Trail Blazers,1
+2001,Philadelphia 76ers,1
+2001,Boston Celtics,0
+2001,Phoenix Suns,1
+2001,Washington Wizards,0
+2001,Indiana Pacers,1
+2001,Los Angeles Clippers,0
+2001,Golden State Warriors,0
+2001,Cleveland Cavaliers,0
+2001,New Jersey Nets,0
+2001,Charlotte Hornets,1
+2001,Vancouver Grizzlies,0
+2001,Atlanta Hawks,0
+2001,Miami Heat,1
+2001,New York Knicks,1
+2001,Chicago Bulls,0
+2002,Dallas Mavericks,1
+2002,Sacramento Kings,1
+2002,Los Angeles Lakers,1
+2002,Orlando Magic,1
+2002,Minnesota Timberwolves,1
+2002,Golden State Warriors,0
+2002,Seattle SuperSonics,1
+2002,Milwaukee Bucks,0
+2002,Indiana Pacers,1
+2002,San Antonio Spurs,1
+2002,Portland Trail Blazers,1
+2002,Boston Celtics,1
+2002,New Jersey Nets,1
+2002,Utah Jazz,1
+2002,Los Angeles Clippers,0
+2002,Cleveland Cavaliers,0
+2002,Phoenix Suns,0
+2002,Detroit Pistons,1
+2002,Atlanta Hawks,0
+2002,Charlotte Hornets,1
+2002,Washington Wizards,0
+2002,Houston Rockets,0
+2002,Denver Nuggets,0
+2002,New York Knicks,0
+2002,Toronto Raptors,1
+2002,Philadelphia 76ers,1
+2002,Memphis Grizzlies,0
+2002,Chicago Bulls,0
+2002,Miami Heat,0
+2003,Dallas Mavericks,1
+2003,Golden State Warriors,0
+2003,Sacramento Kings,1
+2003,Los Angeles Lakers,1
+2003,Milwaukee Bucks,1
+2003,Orlando Magic,1
+2003,Minnesota Timberwolves,1
+2003,Memphis Grizzlies,0
+2003,Philadelphia 76ers,1
+2003,Indiana Pacers,1
+2003,New York Knicks,0
+2003,San Antonio Spurs,1
+2003,Phoenix Suns,1
+2003,New Jersey Nets,1
+2003,Portland Trail Blazers,1
+2003,Chicago Bulls,0
+2003,Utah Jazz,1
+2003,Atlanta Hawks,0
+2003,New Orleans Hornets,1
+2003,Los Angeles Clippers,0
+2003,Houston Rockets,0
+2003,Boston Celtics,1
+2003,Seattle SuperSonics,0
+2003,Washington Wizards,0
+2003,Detroit Pistons,1
+2003,Cleveland Cavaliers,0
+2003,Toronto Raptors,0
+2003,Miami Heat,0
+2003,Denver Nuggets,0
+2004,Dallas Mavericks,1
+2004,Sacramento Kings,1
+2004,Los Angeles Lakers,1
+2004,Milwaukee Bucks,1
+2004,Denver Nuggets,1
+2004,Seattle SuperSonics,0
+2004,Memphis Grizzlies,1
+2004,Boston Celtics,1
+2004,Los Angeles Clippers,0
+2004,Minnesota Timberwolves,1
+2004,Phoenix Suns,0
+2004,Orlando Magic,0
+2004,Golden State Warriors,0
+2004,Cleveland Cavaliers,0
+2004,Atlanta Hawks,0
+2004,New York Knicks,1
+2004,Washington Wizards,0
+2004,New Orleans Hornets,1
+2004,San Antonio Spurs,1
+2004,Indiana Pacers,1
+2004,Portland Trail Blazers,0
+2004,New Jersey Nets,1
+2004,Miami Heat,1
+2004,Detroit Pistons,1
+2004,Houston Rockets,1
+2004,Chicago Bulls,0
+2004,Utah Jazz,0
+2004,Philadelphia 76ers,0
+2004,Toronto Raptors,0
+2005,Phoenix Suns,1
+2005,Sacramento Kings,1
+2005,Dallas Mavericks,1
+2005,Miami Heat,1
+2005,Boston Celtics,1
+2005,Washington Wizards,1
+2005,Toronto Raptors,0
+2005,Denver Nuggets,1
+2005,Orlando Magic,0
+2005,Philadelphia 76ers,1
+2005,Seattle SuperSonics,1
+2005,Los Angeles Lakers,0
+2005,Golden State Warriors,0
+2005,New York Knicks,0
+2005,Milwaukee Bucks,0
+2005,Minnesota Timberwolves,0
+2005,Cleveland Cavaliers,0
+2005,San Antonio Spurs,1
+2005,Los Angeles Clippers,0
+2005,Houston Rockets,1
+2005,Chicago Bulls,1
+2005,Charlotte Bobcats,0
+2005,Memphis Grizzlies,1
+2005,Detroit Pistons,1
+2005,Utah Jazz,0
+2005,Indiana Pacers,1
+2005,Portland Trail Blazers,0
+2005,Atlanta Hawks,0
+2005,New Jersey Nets,1
+2005,New Orleans Hornets,0
+2006,Phoenix Suns,1
+2006,Seattle SuperSonics,0
+2006,Washington Wizards,1
+2006,Toronto Raptors,0
+2006,Denver Nuggets,1
+2006,Miami Heat,1
+2006,Philadelphia 76ers,0
+2006,Los Angeles Lakers,1
+2006,Dallas Mavericks,1
+2006,Sacramento Kings,1
+2006,Golden State Warriors,0
+2006,Boston Celtics,0
+2006,Milwaukee Bucks,1
+2006,Chicago Bulls,1
+2006,Cleveland Cavaliers,1
+2006,Los Angeles Clippers,1
+2006,Atlanta Hawks,0
+2006,Charlotte Bobcats,0
+2006,Detroit Pistons,1
+2006,New York Knicks,0
+2006,San Antonio Spurs,1
+2006,Orlando Magic,0
+2006,Indiana Pacers,1
+2006,New Jersey Nets,1
+2006,New Orleans/Oklahoma City Hornets,0
+2006,Utah Jazz,0
+2006,Memphis Grizzlies,1
+2006,Minnesota Timberwolves,0
+2006,Houston Rockets,0
+2006,Portland Trail Blazers,0
+2007,Phoenix Suns,1
+2007,Golden State Warriors,1
+2007,Denver Nuggets,1
+2007,Washington Wizards,1
+2007,Los Angeles Lakers,1
+2007,Memphis Grizzlies,0
+2007,Utah Jazz,1
+2007,Sacramento Kings,0
+2007,Dallas Mavericks,1
+2007,Milwaukee Bucks,0
+2007,Toronto Raptors,1
+2007,Seattle SuperSonics,0
+2007,Chicago Bulls,1
+2007,San Antonio Spurs,1
+2007,New Jersey Nets,1
+2007,New York Knicks,0
+2007,Houston Rockets,1
+2007,Charlotte Bobcats,0
+2007,Cleveland Cavaliers,1
+2007,Minnesota Timberwolves,0
+2007,Detroit Pistons,1
+2007,Boston Celtics,0
+2007,Los Angeles Clippers,0
+2007,Indiana Pacers,0
+2007,New Orleans/Oklahoma City Hornets,0
+2007,Philadelphia 76ers,0
+2007,Orlando Magic,1
+2007,Miami Heat,1
+2007,Portland Trail Blazers,0
+2007,Atlanta Hawks,0
+2008,Golden State Warriors,0
+2008,Denver Nuggets,1
+2008,Phoenix Suns,1
+2008,Los Angeles Lakers,1
+2008,Utah Jazz,1
+2008,Orlando Magic,1
+2008,Indiana Pacers,0
+2008,Sacramento Kings,0
+2008,New Orleans Hornets,1
+2008,Memphis Grizzlies,0
+2008,Boston Celtics,1
+2008,Dallas Mavericks,1
+2008,Toronto Raptors,1
+2008,Washington Wizards,1
+2008,Atlanta Hawks,1
+2008,Detroit Pistons,1
+2008,Seattle SuperSonics,0
+2008,Chicago Bulls,0
+2008,Charlotte Bobcats,0
+2008,Milwaukee Bucks,0
+2008,New York Knicks,0
+2008,Houston Rockets,1
+2008,Philadelphia 76ers,1
+2008,Cleveland Cavaliers,1
+2008,New Jersey Nets,0
+2008,Minnesota Timberwolves,0
+2008,Portland Trail Blazers,0
+2008,San Antonio Spurs,1
+2008,Los Angeles Clippers,0
+2008,Miami Heat,0
+2009,Phoenix Suns,0
+2009,Golden State Warriors,0
+2009,Los Angeles Lakers,1
+2009,New York Knicks,0
+2009,Indiana Pacers,0
+2009,Denver Nuggets,1
+2009,Utah Jazz,1
+2009,Chicago Bulls,1
+2009,Dallas Mavericks,1
+2009,Orlando Magic,1
+2009,Boston Celtics,1
+2009,Sacramento Kings,0
+2009,Cleveland Cavaliers,1
+2009,Portland Trail Blazers,1
+2009,Milwaukee Bucks,0
+2009,Toronto Raptors,0
+2009,Houston Rockets,1
+2009,Miami Heat,1
+2009,Atlanta Hawks,1
+2009,New Jersey Nets,0
+2009,Minnesota Timberwolves,0
+2009,Philadelphia 76ers,1
+2009,Oklahoma City Thunder,0
+2009,San Antonio Spurs,1
+2009,Washington Wizards,0
+2009,New Orleans Hornets,1
+2009,Los Angeles Clippers,0
+2009,Detroit Pistons,1
+2009,Memphis Grizzlies,0
+2009,Charlotte Bobcats,0
+2010,Phoenix Suns,1
+2010,Golden State Warriors,0
+2010,Denver Nuggets,1
+2010,Utah Jazz,1
+2010,Toronto Raptors,0
+2010,Orlando Magic,1
+2010,Memphis Grizzlies,0
+2010,Houston Rockets,0
+2010,Cleveland Cavaliers,1
+2010,New York Knicks,0
+2010,Dallas Mavericks,1
+2010,Los Angeles Lakers,1
+2010,Atlanta Hawks,1
+2010,Oklahoma City Thunder,1
+2010,San Antonio Spurs,1
+2010,Indiana Pacers,0
+2010,New Orleans Hornets,0
+2010,Sacramento Kings,0
+2010,Boston Celtics,1
+2010,Minnesota Timberwolves,0
+2010,Portland Trail Blazers,1
+2010,Milwaukee Bucks,1
+2010,Philadelphia 76ers,0
+2010,Chicago Bulls,1
+2010,Miami Heat,1
+2010,Washington Wizards,0
+2010,Los Angeles Clippers,0
+2010,Charlotte Bobcats,1
+2010,Detroit Pistons,0
+2010,New Jersey Nets,0
+2011,Denver Nuggets,1
+2011,New York Knicks,1
+2011,Houston Rockets,0
+2011,Phoenix Suns,0
+2011,Oklahoma City Thunder,1
+2011,San Antonio Spurs,1
+2011,Golden State Warriors,0
+2011,Miami Heat,1
+2011,Los Angeles Lakers,1
+2011,Minnesota Timberwolves,0
+2011,Dallas Mavericks,1
+2011,Memphis Grizzlies,1
+2011,Indiana Pacers,1
+2011,Utah Jazz,0
+2011,Sacramento Kings,0
+2011,Orlando Magic,1
+2011,Toronto Raptors,0
+2011,Philadelphia 76ers,1
+2011,Los Angeles Clippers,0
+2011,Chicago Bulls,1
+2011,Washington Wizards,0
+2011,Detroit Pistons,0
+2011,Boston Celtics,1
+2011,Portland Trail Blazers,1
+2011,Cleveland Cavaliers,0
+2011,Atlanta Hawks,1
+2011,New Orleans Hornets,1
+2011,New Jersey Nets,0
+2011,Charlotte Bobcats,0
+2011,Milwaukee Bucks,0
+2012,Denver Nuggets,1
+2012,San Antonio Spurs,1
+2012,Oklahoma City Thunder,1
+2012,Utah Jazz,1
+2012,Milwaukee Bucks,0
+2012,Sacramento Kings,0
+2012,Miami Heat,1
+2012,Phoenix Suns,0
+2012,Houston Rockets,0
+2012,Minnesota Timberwolves,0
+2012,Golden State Warriors,0
+2012,New York Knicks,1
+2012,Indiana Pacers,1
+2012,Los Angeles Clippers,1
+2012,Los Angeles Lakers,1
+2012,Portland Trail Blazers,0
+2012,Atlanta Hawks,1
+2012,Chicago Bulls,1
+2012,Dallas Mavericks,1
+2012,Memphis Grizzlies,1
+2012,Orlando Magic,1
+2012,Washington Wizards,0
+2012,Philadelphia 76ers,1
+2012,New Jersey Nets,0
+2012,Cleveland Cavaliers,0
+2012,Boston Celtics,1
+2012,Detroit Pistons,0
+2012,Toronto Raptors,0
+2012,New Orleans Hornets,0
+2012,Charlotte Bobcats,0
+2013,Denver Nuggets,1
+2013,Houston Rockets,1
+2013,Oklahoma City Thunder,1
+2013,San Antonio Spurs,1
+2013,Miami Heat,1
+2013,Los Angeles Lakers,1
+2013,Golden State Warriors,1
+2013,Los Angeles Clippers,1
+2013,Dallas Mavericks,0
+2013,Sacramento Kings,0
+2013,New York Knicks,1
+2013,Milwaukee Bucks,1
+2013,Utah Jazz,0
+2013,Atlanta Hawks,1
+2013,Portland Trail Blazers,0
+2013,Toronto Raptors,0
+2013,Brooklyn Nets,1
+2013,Boston Celtics,1
+2013,Cleveland Cavaliers,0
+2013,Minnesota Timberwolves,0
+2013,Phoenix Suns,0
+2013,Detroit Pistons,0
+2013,Indiana Pacers,1
+2013,New Orleans Hornets,0
+2013,Orlando Magic,0
+2013,Memphis Grizzlies,1
+2013,Charlotte Bobcats,0
+2013,Philadelphia 76ers,0
+2013,Chicago Bulls,1
+2013,Washington Wizards,0
+2014,Los Angeles Clippers,1
+2014,Houston Rockets,1
+2014,Minnesota Timberwolves,0
+2014,Portland Trail Blazers,1
+2014,Oklahoma City Thunder,1
+2014,San Antonio Spurs,1
+2014,Phoenix Suns,0
+2014,Dallas Mavericks,1
+2014,Denver Nuggets,0
+2014,Golden State Warriors,1
+2014,Los Angeles Lakers,0
+2014,Miami Heat,1
+2014,Toronto Raptors,1
+2014,Atlanta Hawks,1
+2014,Detroit Pistons,0
+2014,Washington Wizards,1
+2014,Sacramento Kings,0
+2014,New Orleans Pelicans,0
+2014,Philadelphia 76ers,0
+2014,New York Knicks,0
+2014,Brooklyn Nets,1
+2014,Cleveland Cavaliers,0
+2014,Charlotte Bobcats,1
+2014,Indiana Pacers,1
+2014,Orlando Magic,0
+2014,Boston Celtics,0
+2014,Memphis Grizzlies,1
+2014,Milwaukee Bucks,0
+2014,Utah Jazz,0
+2014,Chicago Bulls,1
+2015,Golden State Warriors,1
+2015,Los Angeles Clippers,1
+2015,Dallas Mavericks,1
+2015,Oklahoma City Thunder,0
+2015,Toronto Raptors,1
+2015,Houston Rockets,1
+2015,San Antonio Spurs,1
+2015,Cleveland Cavaliers,1
+2015,Portland Trail Blazers,1
+2015,Atlanta Hawks,1
+2015,Phoenix Suns,0
+2015,Denver Nuggets,0
+2015,Boston Celtics,1
+2015,Sacramento Kings,0
+2015,Chicago Bulls,1
+2015,New Orleans Pelicans,1
+2015,Washington Wizards,1
+2015,Los Angeles Lakers,0
+2015,Detroit Pistons,0
+2015,Memphis Grizzlies,1
+2015,Brooklyn Nets,1
+2015,Minnesota Timberwolves,0
+2015,Milwaukee Bucks,1
+2015,Indiana Pacers,0
+2015,Orlando Magic,0
+2015,Utah Jazz,0
+2015,Miami Heat,0
+2015,Charlotte Hornets,0
+2015,Philadelphia 76ers,0
+2015,New York Knicks,0
+2016,Golden State Warriors,1
+2016,Oklahoma City Thunder,1
+2016,Sacramento Kings,0
+2016,Houston Rockets,1
+2016,Boston Celtics,1
+2016,Portland Trail Blazers,1
+2016,Los Angeles Clippers,1
+2016,Cleveland Cavaliers,1
+2016,Washington Wizards,0
+2016,San Antonio Spurs,1
+2016,Charlotte Hornets,1
+2016,Atlanta Hawks,1
+2016,Toronto Raptors,1
+2016,New Orleans Pelicans,0
+2016,Minnesota Timberwolves,0
+2016,Dallas Mavericks,1
+2016,Indiana Pacers,1
+2016,Orlando Magic,0
+2016,Detroit Pistons,1
+2016,Denver Nuggets,0
+2016,Chicago Bulls,0
+2016,Phoenix Suns,0
+2016,Miami Heat,1
+2016,Memphis Grizzlies,1
+2016,Milwaukee Bucks,0
+2016,Brooklyn Nets,0
+2016,New York Knicks,0
+2016,Utah Jazz,0
+2016,Philadelphia 76ers,0
+2016,Los Angeles Lakers,0
+2017,Golden State Warriors,1
+2017,Houston Rockets,1
+2017,Denver Nuggets,0
+2017,Cleveland Cavaliers,1
+2017,Washington Wizards,1
+2017,Los Angeles Clippers,1
+2017,Boston Celtics,1
+2017,Portland Trail Blazers,1
+2017,Phoenix Suns,0
+2017,Toronto Raptors,1
+2017,Oklahoma City Thunder,1
+2017,Brooklyn Nets,0
+2017,Minnesota Timberwolves,0
+2017,San Antonio Spurs,1
+2017,Indiana Pacers,1
+2017,Charlotte Hornets,0
+2017,Los Angeles Lakers,0
+2017,New Orleans Pelicans,0
+2017,New York Knicks,0
+2017,Milwaukee Bucks,1
+2017,Atlanta Hawks,1
+2017,Miami Heat,0
+2017,Chicago Bulls,1
+2017,Sacramento Kings,0
+2017,Philadelphia 76ers,0
+2017,Detroit Pistons,0
+2017,Orlando Magic,0
+2017,Utah Jazz,1
+2017,Memphis Grizzlies,1
+2017,Dallas Mavericks,0
+2018,Golden State Warriors,1
+2018,Houston Rockets,1
+2018,New Orleans Pelicans,1
+2018,Toronto Raptors,1
+2018,Cleveland Cavaliers,1
+2018,Denver Nuggets,0
+2018,Philadelphia 76ers,1
+2018,Minnesota Timberwolves,1
+2018,Los Angeles Clippers,0
+2018,Charlotte Hornets,0
+2018,Los Angeles Lakers,0
+2018,Oklahoma City Thunder,1
+2018,Washington Wizards,1
+2018,Brooklyn Nets,0
+2018,Milwaukee Bucks,1
+2018,Indiana Pacers,1
+2018,Portland Trail Blazers,1
+2018,New York Knicks,0
+2018,Utah Jazz,1
+2018,Boston Celtics,1
+2018,Phoenix Suns,0
+2018,Detroit Pistons,0
+2018,Miami Heat,1
+2018,Orlando Magic,0
+2018,Atlanta Hawks,0
+2018,Chicago Bulls,0
+2018,San Antonio Spurs,1
+2018,Dallas Mavericks,0
+2018,Memphis Grizzlies,0
+2018,Sacramento Kings,0
+2019,Milwaukee Bucks,1
+2019,Golden State Warriors,1
+2019,New Orleans Pelicans,0
+2019,Philadelphia 76ers,1
+2019,Los Angeles Clippers,1
+2019,Portland Trail Blazers,1
+2019,Oklahoma City Thunder,1
+2019,Toronto Raptors,1
+2019,Sacramento Kings,0
+2019,Washington Wizards,0
+2019,Houston Rockets,1
+2019,Atlanta Hawks,0
+2019,Minnesota Timberwolves,0
+2019,Boston Celtics,1
+2019,Brooklyn Nets,1
+2019,Los Angeles Lakers,0
+2019,San Antonio Spurs,1
+2019,Utah Jazz,1
+2019,Denver Nuggets,1
+2019,Charlotte Hornets,0
+2019,Dallas Mavericks,0
+2019,Indiana Pacers,1
+2019,Phoenix Suns,0
+2019,Orlando Magic,1
+2019,Detroit Pistons,1
+2019,Miami Heat,0
+2019,Chicago Bulls,0
+2019,New York Knicks,0
+2019,Cleveland Cavaliers,0
+2019,Memphis Grizzlies,0
+2020,Milwaukee Bucks,1
+2020,Houston Rockets,1
+2020,Dallas Mavericks,1
+2020,Los Angeles Clippers,1
+2020,New Orleans Pelicans,0
+2020,Portland Trail Blazers,1
+2020,Washington Wizards,0
+2020,San Antonio Spurs,0
+2020,Boston Celtics,1
+2020,Phoenix Suns,0
+2020,Los Angeles Lakers,1
+2020,Minnesota Timberwolves,0
+2020,Toronto Raptors,1
+2020,Memphis Grizzlies,0
+2020,Miami Heat,1
+2020,Atlanta Hawks,0
+2020,Brooklyn Nets,1
+2020,Denver Nuggets,1
+2020,Utah Jazz,1
+2020,Philadelphia 76ers,1
+2020,Oklahoma City Thunder,1
+2020,Sacramento Kings,0
+2020,Indiana Pacers,1
+2020,Orlando Magic,1
+2020,Detroit Pistons,0
+2020,Cleveland Cavaliers,0
+2020,Chicago Bulls,0
+2020,Golden State Warriors,0
+2020,New York Knicks,0
+2020,Charlotte Hornets,0
+2021,Milwaukee Bucks,1
+2021,Brooklyn Nets,1
+2021,Washington Wizards,1
+2021,Utah Jazz,1
+2021,Portland Trail Blazers,1
+2021,Phoenix Suns,1
+2021,Indiana Pacers,0
+2021,Denver Nuggets,1
+2021,New Orleans Pelicans,0
+2021,Los Angeles Clippers,1
+2021,Atlanta Hawks,1
+2021,Sacramento Kings,0
+2021,Golden State Warriors,0
+2021,Philadelphia 76ers,1
+2021,Memphis Grizzlies,1
+2021,Boston Celtics,1
+2021,Dallas Mavericks,1
+2021,Minnesota Timberwolves,0
+2021,Toronto Raptors,0
+2021,San Antonio Spurs,0
+2021,Chicago Bulls,0
+2021,Los Angeles Lakers,1
+2021,Charlotte Hornets,0
+2021,Houston Rockets,0
+2021,Miami Heat,1
+2021,New York Knicks,1
+2021,Detroit Pistons,0
+2021,Oklahoma City Thunder,0
+2021,Orlando Magic,0
+2021,Cleveland Cavaliers,0
+2022,Minnesota Timberwolves,1
+2022,Memphis Grizzlies,1
+2022,Milwaukee Bucks,1
+2022,Charlotte Hornets,0
+2022,Phoenix Suns,1
+2022,Atlanta Hawks,1
+2022,Utah Jazz,1
+2022,San Antonio Spurs,0
+2022,Brooklyn Nets,1
+2022,Denver Nuggets,1
+2022,Los Angeles Lakers,0
+2022,Boston Celtics,1
+2022,Chicago Bulls,1
+2022,Indiana Pacers,0
+2022,Golden State Warriors,1
+2022,Sacramento Kings,0
+2022,Miami Heat,1
+2022,Philadelphia 76ers,1
+2022,Houston Rockets,0
+2022,Toronto Raptors,1
+2022,New Orleans Pelicans,1
+2022,Washington Wizards,0
+2022,Los Angeles Clippers,0
+2022,Dallas Mavericks,1
+2022,Cleveland Cavaliers,0
+2022,New York Knicks,0
+2022,Portland Trail Blazers,0
+2022,Detroit Pistons,0
+2022,Orlando Magic,0
+2022,Oklahoma City Thunder,0
