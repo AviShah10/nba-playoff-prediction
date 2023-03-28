@@ -56,6 +56,8 @@ def getTeamAverages(seasonDataframe: pd.DataFrame):
                 temp = pd.concat([temp, getAwayStats(df.iloc[[i]])])
 
             i += 1
+
+            # CRITICAL: edit this for how many games to include
             #only takes first half of the season's games (88 game season)
             if i >= 41:
                 break

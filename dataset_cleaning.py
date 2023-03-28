@@ -1,8 +1,9 @@
 # This file is used to clean the Kaggle dataset. The dataset can be found here: https://www.kaggle.com/datasets/wyattowalsh/basketball/discussion.
 # The format of the code is that of scripting, rather than having function calls.
 # I datset has been downlaoded, and is in the file game2000.csv
+
 # The plan is to do the following:
-#   1. Load the dataset into a pandas dataset.
+#   1. Load the entire dataset into a pandas dataset.
 #   2. 
 
 import pandas as pd
