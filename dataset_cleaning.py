@@ -109,15 +109,6 @@ dataset2022.to_csv('./yearly_dataset/dataset2022.csv')
 # smallList = [dataset2000]
 # datasetList = [dataset2000,dataset2001,dataset2002,dataset2003,dataset2004,dataset2005,dataset2006,dataset2007,dataset2008,dataset2009,
 #                dataset2010,dataset2011,dataset2012,dataset2013,dataset2014,dataset2015,dataset2016,dataset2017,dataset2018,dataset2019]
-# Making a list of all the teams in the NBA
-teamList = ['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets',
-            'Chicago Bulls','Cleveland Cavaliers','Dallas Mavericks',
-            'Denver Nuggets','Detroit Pistons','Golden State Warriors','Houston Rockets',
-            'Indiana Pacers','Los Angeles Clippers','Los Angeles Lakers','Memphis Grizzlies',
-            'Miami Heat','Milwaukee Bucks','Minnesota Timberwolves','New Orleans Pelicans',
-            'New York Knicks','Oklahoma City Thunder','Orlando Magic','Philadelphia 76ers',
-            'Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs',
-            'Toronto Raptors','Utah Jazz','Washington Wizards']
 
 # Making a list of all the teams abbrevs in the NBA
 teamList = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
@@ -149,66 +140,69 @@ east2013, west2013 = statgetter.getTeamAverages(dataset2013)
 east2014, west2014 = statgetter.getTeamAverages(dataset2014)
 east2015, west2015 = statgetter.getTeamAverages(dataset2015)
 east2016, west2016 = statgetter.getTeamAverages(dataset2016)
+# east2017, west2017 = statgetter.getTeamAverages(dataset2017) #2017 data doesn't exist in dataset
 east2018, west2018 = statgetter.getTeamAverages(dataset2018)
 east2019, west2019 = statgetter.getTeamAverages(dataset2019)
 east2020, west2020 = statgetter.getTeamAverages(dataset2020)
 east2021, west2021 = statgetter.getTeamAverages(dataset2021)
 east2022, west2022 = statgetter.getTeamAverages(dataset2022)
 
+# east2022.to_csv('./yearly_dataset/east2022.csv')
+# west2022.to_csv('./yearly_dataset/west2022.csv')
 
-#OLD CODE: may not be needed anymore
-# # Creating a datframe for every team that contains data from all the years
-# Atlanta_Hawks = pd.DataFrame(columns = gamesColumns)
-# Boston_Celtics = pd.DataFrame(columns = gamesColumns)
-# Brooklyn_Nets = pd.DataFrame(columns = gamesColumns)
-# Charlotte_Hornets = pd.DataFrame(columns = gamesColumns)
-# Chicago_Bulls = pd.DataFrame(columns = gamesColumns)
-# Cleveland_Cavaliers = pd.DataFrame(columns = gamesColumns)
-# Dallas_Mavericks = pd.DataFrame(columns = gamesColumns)
-# Denver_Nuggets = pd.DataFrame(columns = gamesColumns)
-# Detroit_Pistons = pd.DataFrame(columns = gamesColumns)
-# Golden_State_Warriors = pd.DataFrame(columns = gamesColumns)
-# Houston_Rockets = pd.DataFrame(columns = gamesColumns)
-# Indiana_Pacers = pd.DataFrame(columns = gamesColumns)
-# Los_Angeles_Clippers = pd.DataFrame(columns = gamesColumns)
-# Los_Angeles_Lakers = pd.DataFrame(columns = gamesColumns)
-# Memphis_Grizzlies = pd.DataFrame(columns = gamesColumns)
-# Miami_Heat = pd.DataFrame(columns = gamesColumns)
-# Milwaukee_Bucks = pd.DataFrame(columns = gamesColumns)
-# Minnesota_Timberwolves = pd.DataFrame(columns = gamesColumns)
-# New_Orleans_Pelicans = pd.DataFrame(columns = gamesColumns)
-# New_York_Knicks = pd.DataFrame(columns = gamesColumns)
-# Oklahoma_City_Thunder = pd.DataFrame(columns = gamesColumns)
-# Orlando_Magic = pd.DataFrame(columns = gamesColumns)
-# Philadelphia_76ers = pd.DataFrame(columns = gamesColumns)
-# Phoenix_Suns = pd.DataFrame(columns = gamesColumns)
-# Portland_Trail_Blazers = pd.DataFrame(columns = gamesColumns)
-# Sacramento_Kings = pd.DataFrame(columns = gamesColumns)
-# San_Antonio_Spurs = pd.DataFrame(columns = gamesColumns)
-# Toronto_Raptors = pd.DataFrame(columns = gamesColumns)
-# Utah_Jazz = pd.DataFrame(columns = gamesColumns)
-# Washington_Wizards = pd.DataFrame(columns = gamesColumns)
+##
+## PLAYOFFS
+##
 
-# # Getting the column for the data the contains the name of the team that is playing home
-# teamNameColumn = gamesDataframe['team_name_home']
-# # Iterating through the entire gameDataset
-# for i, team in enumerate(teamNameColumn):
-#         if (team == 'Atlanta Hawks'):
-#             Atlanta_Hawks.loc[i] = gamesDataframe.loc[i]
-#             if 'Atlanta Hawks' in countDictionary:
-#                 countDictionary['Atlanta Hawks'] += 1
-#             else:
-#                 countDictionary['Atlanta Hawks'] = 1
-#         if (team == 'Boston Celtics'):
-#             Boston_Celtics.loc[i] = gamesDataframe.loc[i]
-#             if 'Boston Celtics' in countDictionary:
-#                 countDictionary['Boston Celtics'] += 1
-#             else:
-#                 countDictionary['Boston Celtics'] = 1
-#         if (team == 'Brooklyn Nets'):
-#             Brooklyn_Nets.loc[i] = gamesDataframe.loc[i]
-#             if 'Brooklyn Nets' in countDictionary:
-#                 countDictionary['Brooklyn Nets'] += 1
-#             else:
-#                 countDictionary['Brooklyn Nets'] = 1
+# Making a list of all the teams in the NBA, including supersonics, NJN, vancouver
+teamNames = ['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets',
+            'Chicago Bulls','Cleveland Cavaliers','Dallas Mavericks',
+            'Denver Nuggets','Detroit Pistons','Golden State Warriors','Houston Rockets',
+            'Indiana Pacers','Los Angeles Clippers','Los Angeles Lakers','Memphis Grizzlies',
+            'Miami Heat','Milwaukee Bucks','Minnesota Timberwolves','New Orleans Pelicans',
+            'New York Knicks','Oklahoma City Thunder','Orlando Magic','Philadelphia 76ers',
+            'Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs',
+            'Toronto Raptors','Utah Jazz','Washington Wizards', 'Seattle SuperSonics', 'New Jersey Nets', 'Vancouver Grizzlies', 'Charlotte Bobcats', 'New Orleans Hornets']
+
+teamAbbrev = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
+            'HOU', 'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 
+            'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS', 'OKC', 'BKN', 'MEM', 'CHA', 'NOP']
+
+#Section gets playoff data for every team into dataframes:
+#Returns season's east and west playoff teams and a boolean
+teamNameDict = dict(zip(teamAbbrev, teamNames))
+
+playoffDataframe = pd.read_csv('./playoffs_data.csv', index_col=None)
+east2000playoff, west2000playoff = statgetter.getPlayoffs(2000, playoffDataframe)
+east2001playoff, west2001playoff = statgetter.getPlayoffs(2001, playoffDataframe)
+east2002playoff, west2002playoff = statgetter.getPlayoffs(2002, playoffDataframe)
+east2003playoff, west2003playoff = statgetter.getPlayoffs(2003, playoffDataframe)
+east2004playoff, west2004playoff = statgetter.getPlayoffs(2004, playoffDataframe)
+east2005playoff, west2005playoff = statgetter.getPlayoffs(2005, playoffDataframe)
+east2006playoff, west2006playoff = statgetter.getPlayoffs(2006, playoffDataframe)
+east2007playoff, west2007playoff = statgetter.getPlayoffs(2007, playoffDataframe)
+east2008playoff, west2008playoff = statgetter.getPlayoffs(2008, playoffDataframe)
+east2009playoff, west2009playoff = statgetter.getPlayoffs(2009, playoffDataframe)
+east2010playoff, west2010playoff = statgetter.getPlayoffs(2010, playoffDataframe)
+east2011playoff, west2011playoff = statgetter.getPlayoffs(2011, playoffDataframe)
+east2012playoff, west2012playoff = statgetter.getPlayoffs(2012, playoffDataframe)
+east2013playoff, west2013playoff = statgetter.getPlayoffs(2013, playoffDataframe)
+east2014playoff, west2014playoff = statgetter.getPlayoffs(2014, playoffDataframe)
+east2015playoff, west2015playoff = statgetter.getPlayoffs(2015, playoffDataframe)
+east2016playoff, west2016playoff = statgetter.getPlayoffs(2016, playoffDataframe)
+# east2017playoff, west2017playoff = statgetter.getPlayoffs(2017, playoffDataframe)
+east2018playoff, west2018playoff = statgetter.getPlayoffs(2018, playoffDataframe)
+east2019playoff, west2019playoff = statgetter.getPlayoffs(2019, playoffDataframe)
+east2020playoff, west2020playoff = statgetter.getPlayoffs(2020, playoffDataframe)
+east2021playoff, west2021playoff = statgetter.getPlayoffs(2021, playoffDataframe)
+east2022playoff, west2022playoff = statgetter.getPlayoffs(2022, playoffDataframe)
+
+east2022playoff.to_csv('./yearly_dataset/east2022playoff.csv')
+west2022playoff.to_csv('./yearly_dataset/west2022playoff.csv')
+
+
+print('All done with data processing! use the east and west dataframes and playoff dataframes to run supervised learning.')
+
+
+
 

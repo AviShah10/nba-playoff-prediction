@@ -18,6 +18,17 @@ def getTeamAverages(seasonDataframe: pd.DataFrame):
                  1610612754, 1610612746, 1610612747, 1610612763, 1610612748, 1610612749, 1610612750, 1610612740, 1610612752, 1610612760, 1610612753, 
                  1610612755, 1610612756, 1610612757, 1610612758, 1610612759, 1610612761, 1610612762, 1610612764]
 
+    teamNames = ['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets',
+            'Chicago Bulls','Cleveland Cavaliers','Dallas Mavericks',
+            'Denver Nuggets','Detroit Pistons','Golden State Warriors','Houston Rockets',
+            'Indiana Pacers','Los Angeles Clippers','Los Angeles Lakers','Memphis Grizzlies',
+            'Miami Heat','Milwaukee Bucks','Minnesota Timberwolves','New Orleans Pelicans',
+            'New York Knicks','Oklahoma City Thunder','Orlando Magic','Philadelphia 76ers',
+            'Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs',
+            'Toronto Raptors','Utah Jazz','Washington Wizards']
+    
+    teamNameDict = dict(zip(teamList, teamNames))
+
     #Creaets dict of all the teams' id and abbreviation
     teamDict = dict(zip(teamCodes, teamList))
 
@@ -116,3 +127,43 @@ def getAwayStats(awaygame: pd.DataFrame):
     #1 is defined as away
     gamedf.at[gamedf.index[0],'MATCHUP'] = 1
     return gamedf
+
+
+# Helper function to get the playoff results dataframe for east, west for given season
+def getPlayoffs(year, playoffdf: pd.DataFrame):
+    teamNames = ['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets',
+                'Chicago Bulls','Cleveland Cavaliers','Dallas Mavericks',
+                'Denver Nuggets','Detroit Pistons','Golden State Warriors','Houston Rockets',
+                'Indiana Pacers','Los Angeles Clippers','Los Angeles Lakers','Memphis Grizzlies',
+                'Miami Heat','Milwaukee Bucks','Minnesota Timberwolves','New Orleans Pelicans',
+                'New York Knicks','Oklahoma City Thunder','Orlando Magic','Philadelphia 76ers',
+                'Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs',
+                'Toronto Raptors','Utah Jazz','Washington Wizards', 'Seattle SuperSonics', 'New Jersey Nets', 'Vancouver Grizzlies', 'Charlotte Bobcats', 'New Orleans Hornets', 'New Orleans/Oklahoma City Hornets']
+
+    teamAbbrev = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
+            'HOU', 'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 
+            'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS', 'OKC', 'BKN', 'MEM', 'CHA', 'NOP', 'NOP']
+
+    east = ['ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 'DET', 'IND', 'MIA', 'MIL', 'NYK', 'ORL', 'PHI', 'TOR', 'WAS']
+
+    west = ['DAL', 'DEN', 'GSW', 'HOU', 'LAC', 'LAL', 'MEM', 'MIN', 'NOP', 'OKC', 'PHX', 'POR', 'SAC', 'SAS', 'UTA']
+
+    #Section gets playoff data for every team into dataframes:
+    #Returns season's east and west playoff teams and a boolean
+    teamNameDict = dict(zip(teamNames, teamAbbrev))
+
+    seasondf = playoffdf[playoffdf['year'] == year]
+
+    eastplayoff = pd.DataFrame(columns = ['TEAM', 'PLAYOFF'])
+    westplayoff = pd.DataFrame(columns = ['TEAM', 'PLAYOFF'])
+
+    for teamname in seasondf['team']:
+        team = teamNameDict[teamname]
+        playoff_status = seasondf[seasondf['team'] == teamname]['is_playoffs_team'].values[0]
+        row = pd.DataFrame({'TEAM': [team], 'PLAYOFF': [playoff_status]})
+        if team in east:
+            eastplayoff = pd.concat([eastplayoff, row], ignore_index=True)
+        else:
+            westplayoff = pd.concat([westplayoff, row], ignore_index=True)
+
+    return eastplayoff, westplayoff
