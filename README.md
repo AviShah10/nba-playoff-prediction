@@ -14,6 +14,9 @@ The NBA is the world’s most competitive professional basketball league and eac
 ## Methods:
 
 
+CHARLOTTE/NEW ORLEANS:
+Charlotte was an eastern conference team in 2000, 2001, 2002. Changed to New Orleans for 2003, 2004 but stayed in eastern conference. We removed 2004 due to midseason shift but in 2003 New Orleans (NOP) was shifted to the east and the first few years only have 29 teams up until the expansion.
+
 ## Results and Discussion:
 
 REQUIREMENTS AS PER THE ASSIGNMENT DESCRIPTION:
