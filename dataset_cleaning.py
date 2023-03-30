@@ -18,7 +18,7 @@ import statgetter
 #####################################
 
 # This reads in the file called 'game.csv'
-gamesDataframe = pd.read_csv('./game2000.csv', index_col=None)
+gamesDataframe = pd.read_csv('raw_data/game2000.csv', index_col=None)
 # We then print the column names in the gamesDataFrame
 gamesColumns = gamesDataframe.columns.values.tolist()
 # print("The following columns are available in the dataset")
