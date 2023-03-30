@@ -90,6 +90,9 @@ west2019['SEASON'] = 2019
 eastTrainingData = pd.concat([east2000, east2001, east2002, east2003, east2005, east2006, east2007, east2008, east2009, east2010, east2011, east2012, east2013, east2014, east2015, east2016, east2017, east2018, east2019])
 westTrainingData = pd.concat([west2000, west2001, west2002, west2003, west2005, west2006, west2007, west2008, west2009, west2010, west2011, west2012, west2013, west2014, west2015, west2016, west2017, west2018, west2019])
 
+eastTrainingData = eastTrainingData.sort_values(by=['SEASON', 'TEAM'])
+westTrainingData = westTrainingData.sort_values(by=['SEASON', 'TEAM'])
+
 eastTrainingData.to_csv('./eastTrainingData.csv')
 westTrainingData.to_csv('./westTrainingData.csv')
 
@@ -175,6 +178,9 @@ west2019playoff['SEASON'] = 2019
 eastTrainingPlayoffs = pd.concat([east2000playoff, east2001playoff, east2002playoff, east2003playoff, east2005playoff, east2006playoff, east2007playoff, east2008playoff, east2009playoff, east2010playoff, east2011playoff, east2012playoff, east2013playoff, east2014playoff, east2015playoff, east2016playoff, east2017playoff, east2018playoff, east2019playoff], ignore_index=True)
 westTrainingPlayoffs = pd.concat([west2000playoff, west2001playoff, west2002playoff, west2003playoff, west2005playoff, west2006playoff, west2007playoff, west2008playoff, west2009playoff, west2010playoff, west2011playoff, west2012playoff, west2013playoff, west2014playoff, west2015playoff, west2016playoff, west2017playoff, west2018playoff, west2019playoff], ignore_index=True)
 
+eastTrainingPlayoffs = eastTrainingPlayoffs.sort_values(by=['SEASON', 'TEAM'])
+westTrainingPlayoffs = westTrainingPlayoffs.sort_values(by=['SEASON', 'TEAM'])
+
 eastTrainingPlayoffs.to_csv('./eastTrainingPlayoffs.csv')
 westTrainingPlayoffs.to_csv('./westTrainingPlayoffs.csv')
 
@@ -195,6 +201,9 @@ west2022['SEASON'] = 2022
 eastValidationData = pd.concat([east2020, east2021, east2022])
 westValidationData = pd.concat([west2020, west2021, west2022])
 
+eastValidationData = eastValidationData.sort_values(by=['SEASON', 'TEAM'])
+westValidationData = westValidationData.sort_values(by=['SEASON', 'TEAM'])
+
 eastValidationData.to_csv('./eastValidationData.csv')
 westValidationData.to_csv('./westValidationData.csv')
 
@@ -214,6 +223,9 @@ west2022playoff['SEASON'] = 2022
 
 eastValidationPlayoffs = pd.concat([east2020, east2021, east2022], ignore_index=True)
 westValidationPlayoffs = pd.concat([west2020, west2021, west2022], ignore_index=True)
+
+eastValidationPlayoffs = eastValidationPlayoffs.sort_values(by=['SEASON', 'TEAM'])
+westValidationPlayoffs = westValidationPlayoffs.sort_values(by=['SEASON', 'TEAM'])
 
 eastValidationPlayoffs.to_csv('./eastValidationPlayoffs.csv')
 westValidationPlayoffs.to_csv('./westValidationPlayoffs.csv')
