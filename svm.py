@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from pathlib import Path
 
+from sklearn.svm import SVC
+
 x_train_list = []
 y_train_list = []
 
@@ -43,37 +45,40 @@ y_test = y_test.drop("index", axis=1)
 y_test_prediction = y_test
 y_test = y_test.drop("TEAM", axis=1)
 
-print("Logistic Regression Model for the 2021 NBA season in the Eastern Conference")
+print("Support Vector Machine Model for the 2021 NBA season in the Eastern Conference")
 
 east_logreg = LogisticRegression()
 east_logreg.fit(x_train, y_train)
 
-east_logreg_train_score = east_logreg.score(x_train, y_train)
-print("Score for training data: " + str(east_logreg_train_score))
-east_logreg_test_score = east_logreg.score(x_test, y_test)
-print("Score for testing data: " + str(east_logreg_test_score))
+east_svm = SVC(kernel="linear", probability=True)
+east_svm.fit(x_train, y_train)
+
+east_svm_train_score = east_logreg.score(x_train, y_train)
+print("Score for training data: " + str(east_svm_train_score))
+east_svm_test_score = east_logreg.score(x_test, y_test)
+print("Score for testing data: " + str(east_svm_test_score))
 print()
 
 train_feature_names = x_train.columns
 
 print("Most important features for 2021 in the Eastern Conference")
 print()
-coefficient_logreg = east_logreg.coef_
-importance_logreg = coefficient_logreg[0]
-abs_importance_logreg = abs(importance_logreg)
-importance_list_log = list(zip(train_feature_names, importance_logreg, abs_importance_logreg))
-importance_list_log.sort(key=lambda x: x[2], reverse=True)
+coefficient_svm = east_svm.coef_
+importance_svm = coefficient_svm[0]
+abs_importance_svm = abs(importance_svm)
+importance_list_svm = list(zip(train_feature_names, importance_svm, abs_importance_svm))
+importance_list_svm.sort(key=lambda x: x[2], reverse=True)
 for i in range(5):
-    print(importance_list_log[i])
+    print(importance_list_svm[i])
 print()
 
 print("Predictions for which teams makes the playoffs for 2021 in the Eastern Conference")
 print()
 east_predictions_2021 = y_test_prediction[["TEAM", "PLAYOFF"]]
-logreg_probability = east_logreg.predict_proba(x_test)[:, 1].tolist()
-logreg_prediction = east_logreg.predict(x_test).tolist()
-east_predictions_2021["PREDICTION"] = logreg_prediction
-east_predictions_2021["PROBABILITY"] = logreg_probability
+svm_probability = east_svm.predict_proba(x_test)[:, 1].tolist()
+svm_prediction = east_svm.predict(x_test).tolist()
+east_predictions_2021["PREDICTION"] = svm_prediction
+east_predictions_2021["PROBABILITY"] = svm_probability
 east_predictions_2021 = east_predictions_2021.sort_values("PROBABILITY", ascending=False)
 
 print(east_predictions_2021)
