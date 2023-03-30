@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 from pathlib import Path
 
 x_train_list = []
@@ -43,14 +46,52 @@ y_test = y_test.drop("index", axis=1)
 y_test_prediction = y_test
 y_test = y_test.drop("TEAM", axis=1)
 
+##############################
+## STANDARDIZING THE X DATA ##
+##############################
+sc = StandardScaler()
+x_train_scaled = sc.fit_transform(x_train)
+x_test_scaled = sc.transform(x_test)
+
+############################
+## NORMALIZING THE X DATA ##
+############################
+a = preprocessing.normalize(x_train_scaled, axis = 0)
+x_train_normalized = pd.DataFrame(a, columns = x_train.columns)
+
+b = preprocessing.normalize(x_test_scaled, axis = 0)
+x_test_normalized = pd. DataFrame (b, columns = x_test.columns)
+
+#######################################
+## USING TRAIN_TEST_SPLIT IN SKLEARN ##
+#######################################
+
+xTrain, yTrain, xTest, yTest = train_test_split(y_train, x_train, test_size = 0.40, random_state = 30)
+print("This is xTrain")
+print(xTrain)
+print()
+print("This is xTest")
+print(xTest)
+print()
+print("This is yTrain")
+print(yTrain)
+print()
+print("This is yTest")
+print(yTest)
+print()
+
+###############################
+## LOGISTIC REGRESSION MODEL ##
+###############################
+
 print("Logistic Regression Model for the 2021 NBA season in the Eastern Conference")
 
 east_logreg = LogisticRegression()
-east_logreg.fit(x_train, y_train)
+east_logreg.fit(xTrain, yTrain)
 
-east_logreg_train_score = east_logreg.score(x_train, y_train)
+east_logreg_train_score = east_logreg.score(xTrain, yTrain)
 print("Score for training data: " + str(east_logreg_train_score))
-east_logreg_test_score = east_logreg.score(x_test, y_test)
+east_logreg_test_score = east_logreg.score(xTest, yTest)
 print("Score for testing data: " + str(east_logreg_test_score))
 print()
 
@@ -70,8 +111,8 @@ print()
 print("Predictions for which teams makes the playoffs for 2021 in the Eastern Conference")
 print()
 east_predictions_2021 = y_test_prediction[["TEAM", "PLAYOFF"]]
-logreg_probability = east_logreg.predict_proba(x_test)[:, 1].tolist()
-logreg_prediction = east_logreg.predict(x_test).tolist()
+logreg_probability = east_logreg.predict_proba(xTest)[:, 1].tolist()
+logreg_prediction = east_logreg.predict(xTest).tolist()
 east_predictions_2021["PREDICTION"] = logreg_prediction
 east_predictions_2021["PROBABILITY"] = logreg_probability
 east_predictions_2021 = east_predictions_2021.sort_values("PROBABILITY", ascending=False)
