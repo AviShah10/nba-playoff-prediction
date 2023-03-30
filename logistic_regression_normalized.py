@@ -1,3 +1,7 @@
+# THIS IS A SIDE FILE THAT WAS USED TO TEST OUT A NORMALIZATION METHOD FOR THE LOGISTIC REGRESSION MODEL.
+# THIS FILE IS NOT USED TO CERATE THE FINAL MODEL.
+
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression

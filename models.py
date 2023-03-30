@@ -1,4 +1,5 @@
-# THIS IS THE MAIN FILE USED TO CREATE THE LOGISTIC REGRESSION MODEL.
+# THIS IS THE MAIN FILE USED TO CREATE ALL THE MODELS THAT WE ARE THINKING TO USE.
+# We have so far implemented two models: Logistic Regression and SVM.
 
 import pandas as pd
 import numpy as np
@@ -7,6 +8,7 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from pathlib import Path
+from sklearn.svm import SVC
 
 ##############################################################
 ## READING IN TRAINING DATA THAT HAS BEEN PREVIOSLY CLEANED ##
@@ -115,12 +117,12 @@ x_test_normalized = pd. DataFrame (b, columns = x_test.columns)
 ## LOGISTIC REGRESSION MODEL ##
 ###############################
 
-print("Logistic Regression Model for the 2021 NBA season in the Eastern Conference")
-
+print("LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE")
+print()
 # Creating a logistic regression object.
 east_logreg = LogisticRegression()
 # Fitting the model with the normalized x training and y training data.
-east_logreg.fit(x_train_normalized, y_train)
+east_logreg.fit(x_train_normalized, np.ravel(y_train))
 # Getting the score from the normalized x training and y trianing data.
 east_logreg_train_score = east_logreg.score(x_train_normalized, y_train)
 # Printing out this score.
@@ -132,9 +134,7 @@ print("Score for testing data: " + str(east_logreg_test_score))
 print()
 # Getting the names of the columns in the x training dataset.
 train_feature_names = x_train.columns
-
 print("Most important features for 2021 in the Eastern Conference")
-print()
 # Calculating the coeffeicnt for the logistic regression model. 
 coefficient_logreg = east_logreg.coef_
 # Getting the most important coefficient value which would be the first one in the list.
@@ -148,20 +148,69 @@ importance_list_log.sort(key=lambda x: x[2], reverse=True)
 for i in range(5):
     print(importance_list_log[i])
 print()
-
 print("Predictions for which teams makes the playoffs for 2021 in the Eastern Conference")
-print()
 # Getting the teams and whether they made it to the playoffs in our testing data. This will be the prediction that we would like to match.
-east_predictions_2021 = y_test_prediction[["TEAM", "PLAYOFF"]]
+east_predictions_2021_LR = y_test_prediction[["TEAM", "PLAYOFF"]]
 # Getting the probability of this predction, using the x data.
 logreg_probability = east_logreg.predict_proba(x_test_normalized)[:, 1].tolist()
 # Making a new predcition.
 logreg_prediction = east_logreg.predict(x_test_normalized).tolist()
-# Assinging the prediciotn value to the prediciotn colum in the list.
-east_predictions_2021["PREDICTION"] = logreg_prediction
-# Assigning the probabilities to the column in the list..
-east_predictions_2021["PROBABILITY"] = logreg_probability
+# Assigning the prediction value to the prediciotn column in the list.
+east_predictions_2021_LR["PREDICTION"] = logreg_prediction
+# Assigning the probabilities to the column in the list.
+east_predictions_2021_LR["PROBABILITY"] = logreg_probability
 # Sorting the list according to the porbability values.
-east_predictions_2021 = east_predictions_2021.sort_values("PROBABILITY", ascending=False)
+east_predictions_2021_LR = east_predictions_2021_LR.sort_values("PROBABILITY", ascending=False)
+print(east_predictions_2021_LR)
+print()
+print()
 
-print(east_predictions_2021)
+###############
+## SVM MODEL ##
+###############
+
+print("SVM MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE")
+print()
+# Making SVM model.
+east_svm = SVC(kernel="linear", probability=True)
+# Fitting the data to the model.
+east_svm.fit(x_train_normalized, np.ravel(y_train))
+# Calculating the score from the x and y training data.
+east_svm_train_score = east_svm.score(x_train_normalized, y_train)
+# Printing the score for the training data.
+print("Score for training data: " + str(east_svm_train_score))
+# Printing the score for the test data.
+east_svm_test_score = east_svm.score(x_test, y_test)
+# Printing the score for the training data.
+print("Score for testing data: " + str(east_svm_test_score))
+print()
+# Getting the names of the columns in the x training dataset.
+train_feature_names_SVM = x_train.columns
+print("Most important features for 2021 in the Eastern Conference")
+# Calculating the coefficient for the SVM.
+coefficient_svm = east_svm.coef_
+# Getting the most important coefficient value which would be the first one in the list.
+importance_svm = coefficient_svm[0]
+# Taking the absolute value of this coeffficient.
+abs_importance_svm = abs(importance_svm)
+# Making a list of the feature names, the importance coeffeicient and the absolute value of this coefficient.
+importance_list_svm = list(zip(train_feature_names_SVM, importance_svm, abs_importance_svm))
+# Sorting this list according to the absolute values of the coefficient.
+importance_list_svm.sort(key=lambda x: x[2], reverse=True)
+for i in range(5):
+    print(importance_list_svm[i])
+print()
+print("Predictions for which teams makes the playoffs for 2021 in the Eastern Conference")
+# Getting the teams and whether they made it to the playoffs in our testing data. This will be the prediction that we would like to match.
+east_predictions_2021_SVM = y_test_prediction[["TEAM", "PLAYOFF"]]
+# Getting the probability of this predction, using the x data.
+svm_probability = east_svm.predict_proba(x_test_normalized)[:, 1].tolist()
+# Making a new predcition.
+svm_prediction = east_svm.predict(x_test_normalized).tolist()
+# Assigning the prediction value to the prediciotn colum in the list.
+east_predictions_2021_SVM["PREDICTION"] = svm_prediction
+# Assigning the probabilities to the column in the list.
+east_predictions_2021_SVM["PROBABILITY"] = svm_probability
+# Sorting the list according to the porbability values.
+east_predictions_2021_SVM = east_predictions_2021_SVM.sort_values("PROBABILITY", ascending=False)
+print(east_predictions_2021_SVM)

@@ -1,17 +1,27 @@
+# THIS IS THE MAIN FILE FOR THE SVM MODEL.
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from pathlib import Path
-
 from sklearn.svm import SVC
 
+##############################################################
+## READING IN TRAINING DATA THAT HAS BEEN PREVIOSLY CLEANED ##
+##############################################################
+
+# Creating two empty lists that are used to store the data that is read in.
 x_train_list = []
 y_train_list = []
-
+# Iterating through the data for all the years.
 for i in range(2000, 2021):
+    # We ignore the year of 2004, as there seems to me something wrong with the formatting of the data in out dataset.
     if i != 2004:
+        # Assembling in the name of the file that contains the x data that needs to be trained.
         file_name = "season_stats/east" + str(i) + ".csv"
+         # Reading the x data from the filename created above.
         df_x = pd.read_csv(file_name, index_col=0)
+
         df_x = df_x.sort_values("TEAM")
         df_x = df_x.reset_index()
         df_x = df_x.drop("TEAM", axis=1)
@@ -53,9 +63,9 @@ east_logreg.fit(x_train, y_train)
 east_svm = SVC(kernel="linear", probability=True)
 east_svm.fit(x_train, y_train)
 
-east_svm_train_score = east_logreg.score(x_train, y_train)
+east_svm_train_score = east_svm.score(x_train, y_train)
 print("Score for training data: " + str(east_svm_train_score))
-east_svm_test_score = east_logreg.score(x_test, y_test)
+east_svm_test_score = east_svm.score(x_test, y_test)
 print("Score for testing data: " + str(east_svm_test_score))
 print()
 
