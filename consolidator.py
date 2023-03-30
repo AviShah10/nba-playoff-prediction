@@ -4,7 +4,7 @@ import os
 import numpy as np
 import statgetter
 
-trainingyears = [2000, 2001, 2002, 2003, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
+trainingyears = [2000, 2001, 2002, 2003, 2004, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
 validationyears = [2020, 2021, 2022]
 
 #Load all csv's for training
@@ -16,8 +16,8 @@ east2002 = pd.read_csv('./season_stats/east2002.csv', index_col=None)
 east2002['SEASON'] = 2002
 east2003 = pd.read_csv('./season_stats/east2003.csv', index_col=None)
 east2003['SEASON'] = 2003
-east2005 = pd.read_csv('./season_stats/east2005.csv', index_col=None)
-east2005['SEASON'] = 2005
+east2004 = pd.read_csv('./season_stats/east2004.csv', index_col=None)
+east2004['SEASON'] = 2004
 east2006 = pd.read_csv('./season_stats/east2006.csv', index_col=None)
 east2006['SEASON'] = 2006
 east2007 = pd.read_csv('./season_stats/east2007.csv', index_col=None)
@@ -55,8 +55,8 @@ west2002 = pd.read_csv('./season_stats/west2002.csv', index_col=None)
 west2002['SEASON'] = 2002
 west2003 = pd.read_csv('./season_stats/west2003.csv', index_col=None)
 west2003['SEASON'] = 2003
-west2005 = pd.read_csv('./season_stats/west2005.csv', index_col=None)
-west2005['SEASON'] = 2005
+west2004 = pd.read_csv('./season_stats/west2004.csv', index_col=None)
+west2004['SEASON'] = 2004
 west2006 = pd.read_csv('./season_stats/west2006.csv', index_col=None)
 west2006['SEASON'] = 2006
 west2007 = pd.read_csv('./season_stats/west2007.csv', index_col=None)
@@ -87,8 +87,8 @@ west2019 = pd.read_csv('./season_stats/west2019.csv', index_col=None)
 west2019['SEASON'] = 2019
 
 #Merge into one dataframe
-eastTrainingData = pd.concat([east2000, east2001, east2002, east2003, east2005, east2006, east2007, east2008, east2009, east2010, east2011, east2012, east2013, east2014, east2015, east2016, east2017, east2018, east2019])
-westTrainingData = pd.concat([west2000, west2001, west2002, west2003, west2005, west2006, west2007, west2008, west2009, west2010, west2011, west2012, west2013, west2014, west2015, west2016, west2017, west2018, west2019])
+eastTrainingData = pd.concat([east2000, east2001, east2002, east2003, east2004, east2006, east2007, east2008, east2009, east2010, east2011, east2012, east2013, east2014, east2015, east2016, east2017, east2018, east2019])
+westTrainingData = pd.concat([west2000, west2001, west2002, west2003, west2004, west2006, west2007, west2008, west2009, west2010, west2011, west2012, west2013, west2014, west2015, west2016, west2017, west2018, west2019])
 
 eastTrainingData = eastTrainingData.sort_values(by=['SEASON', 'TEAM'])
 westTrainingData = westTrainingData.sort_values(by=['SEASON', 'TEAM'])
@@ -105,8 +105,8 @@ east2002playoff = pd.read_csv('./playoff_labels/east2002playoff.csv', index_col=
 east2002playoff['SEASON'] = 2002
 east2003playoff = pd.read_csv('./playoff_labels/east2003playoff.csv', index_col=None)
 east2003playoff['SEASON'] = 2003
-east2005playoff = pd.read_csv('./playoff_labels/east2005playoff.csv', index_col=None)
-east2005playoff['SEASON'] = 2005
+east2004playoff = pd.read_csv('./playoff_labels/east2004playoff.csv', index_col=None)
+east2004playoff['SEASON'] = 2004
 east2006playoff = pd.read_csv('./playoff_labels/east2006playoff.csv', index_col=None)
 east2006playoff['SEASON'] = 2006
 east2007playoff = pd.read_csv('./playoff_labels/east2007playoff.csv', index_col=None)
@@ -144,8 +144,8 @@ west2002playoff = pd.read_csv('./playoff_labels/west2002playoff.csv', index_col=
 west2002playoff['SEASON'] = 2002
 west2003playoff = pd.read_csv('./playoff_labels/west2003playoff.csv', index_col=None)
 west2003playoff['SEASON'] = 2003
-west2005playoff = pd.read_csv('./playoff_labels/west2005playoff.csv', index_col=None)
-west2005playoff['SEASON'] = 2005
+west2004playoff = pd.read_csv('./playoff_labels/west2004playoff.csv', index_col=None)
+west2004playoff['SEASON'] = 2004
 west2006playoff = pd.read_csv('./playoff_labels/west2006playoff.csv', index_col=None)
 west2006playoff['SEASON'] = 2006
 west2007playoff = pd.read_csv('./playoff_labels/west2007playoff.csv', index_col=None)
@@ -175,8 +175,8 @@ west2018playoff['SEASON'] = 2018
 west2019playoff = pd.read_csv('./playoff_labels/west2019playoff.csv', index_col=None)
 west2019playoff['SEASON'] = 2019
 
-eastTrainingPlayoffs = pd.concat([east2000playoff, east2001playoff, east2002playoff, east2003playoff, east2005playoff, east2006playoff, east2007playoff, east2008playoff, east2009playoff, east2010playoff, east2011playoff, east2012playoff, east2013playoff, east2014playoff, east2015playoff, east2016playoff, east2017playoff, east2018playoff, east2019playoff], ignore_index=True)
-westTrainingPlayoffs = pd.concat([west2000playoff, west2001playoff, west2002playoff, west2003playoff, west2005playoff, west2006playoff, west2007playoff, west2008playoff, west2009playoff, west2010playoff, west2011playoff, west2012playoff, west2013playoff, west2014playoff, west2015playoff, west2016playoff, west2017playoff, west2018playoff, west2019playoff], ignore_index=True)
+eastTrainingPlayoffs = pd.concat([east2000playoff, east2001playoff, east2002playoff, east2003playoff, east2004playoff, east2006playoff, east2007playoff, east2008playoff, east2009playoff, east2010playoff, east2011playoff, east2012playoff, east2013playoff, east2014playoff, east2015playoff, east2016playoff, east2017playoff, east2018playoff, east2019playoff], ignore_index=True)
+westTrainingPlayoffs = pd.concat([west2000playoff, west2001playoff, west2002playoff, west2003playoff, west2004playoff, west2006playoff, west2007playoff, west2008playoff, west2009playoff, west2010playoff, west2011playoff, west2012playoff, west2013playoff, west2014playoff, west2015playoff, west2016playoff, west2017playoff, west2018playoff, west2019playoff], ignore_index=True)
 
 eastTrainingPlayoffs = eastTrainingPlayoffs.sort_values(by=['SEASON', 'TEAM'])
 westTrainingPlayoffs = westTrainingPlayoffs.sort_values(by=['SEASON', 'TEAM'])
