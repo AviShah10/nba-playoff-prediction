@@ -19,9 +19,18 @@ The Kaggle dataset we are using for season averages for teams does not include a
 
 ## Methods:
 
+### Data Cleaning/Pre-processing
 
 CHARLOTTE/NEW ORLEANS:
 Charlotte was an eastern conference team in 2000, 2001, 2002. Changed to New Orleans for 2003, 2004 but stayed in eastern conference. We removed 2004 due to midseason shift but in 2003 New Orleans (NOP) was shifted to the east and the first few years only have 29 teams up until the expansion.
+
+### Training Models
+
+Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
+
+For both our logistic regression and SVM models, we proceeded with the same following steps. We used the season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
+
+So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
 ## Results and Discussion:
 
