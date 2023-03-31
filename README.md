@@ -135,6 +135,4 @@ Param: Was in charge of creating the visuals and the explanations for why these 
 
 Saahas: Was in charge of creating the python code for the visuals and helped with the explanations for why these visuals are useful and what learned from them. Created all the scatterplots and the 3-D graphs using matplotlib. Assisted with writing the "Results and Discussion" portion of this report, as well as helping interpret the results from the analysis and the plots ...
 
-![image](https://user-images.githubusercontent.com/126113216/229226418-9e5e22c2-c20e-4c71-914f-a0486144d2ff.png)
-
-
+<img width="386" alt="Screen Shot 2023-03-31 at 16 48 22" src="https://user-images.githubusercontent.com/126113216/229227142-3db540cb-8ccf-4ce4-8fa8-1f6bc0b3fbaf.png">
