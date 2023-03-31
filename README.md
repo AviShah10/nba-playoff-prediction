@@ -125,13 +125,13 @@ Wang, Jingru, and Qishi Fan. “Application of Machine Learning on NBA Data Sets
 
 ## Contributions (Midterm; for Project Proposal contributions please see the Proposal README):
 
-Samuel: Was in charge of later data cleaning and processing, such as troubleshooting issues with conferences/team relocations, averaging the teams' midseason stats, and reshaping to be compatible with the learning models. Helped with the implementation of the models by fixing any errors that could be dealt with on the data side such as mismatching rows, incorrect labeling, etc. and contributed in writing the 'Data Collection' and 'Methods' sections of this report.
+Samuel: Was in charge of later data cleaning and processing, such as troubleshooting issues with conferences/team relocations, averaging the teams' midseason stats, and reshaping to be compatible with the learning models. Helped with the implementation of the models by fixing any errors that could be dealt with on the data side such as mismatching rows, incorrect labeling, etc. and contributed in writing the 'Data Collection' and 'Methods' sections of this report ...
 
 Divyesh: Was in charge of the early data cleaning and processing. Parsed through the game.csv file and took the 2000-2022 seasons and split into each team's games. Also helped with the creation of SVM and logistic regression models and ...
 
 Avi: Was in charge of the application of the learning models to the cleaned data. Implemented scikit.learn in python to train data to predict playoff results based on midseason averages. Was critically important in communicating any issues with the dataset that needed fixing, as well as helping interpret results for the analysis and graphs ...
 
-Param: Was in charge of creating the visuals and the explanations for why these visuals are useful and what we will learn from them. Through this analysis, we gained a better understadning as to our goals/aims for the coming months. Was a huge contributor of writing the "Results and Discussion" of this report
+Param: Was in charge of creating the visuals and the explanations for why these visuals are useful and what we will learn from them. Through this analysis, we gained a better understadning as to our goals/aims for the coming months. Was a huge contributor of writing the "Results and Discussion" of this report ...
 
 Saahas:
 
