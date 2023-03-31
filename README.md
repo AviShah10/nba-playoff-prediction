@@ -83,8 +83,8 @@ For both our logistic regression and SVM models, we proceeded with the same foll
 LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE:
 
 Predictions for which teams makes the playoffs for 2021 in the Eastern Conference:
-| TEAM | PLAYOFF | PREDICTION | PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER| TEAM | PLAYOFF | PREDICTION | PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |12  |PHI        |1           |1     |0.997403|
 |1   |BKN        |1           |1     |0.997387|
 |9   |MIL        |1           |1     |0.997174|
@@ -104,8 +104,8 @@ Predictions for which teams makes the playoffs for 2021 in the Eastern Conferenc
 SVM MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE:
 
 Predictions for which teams makes the playoffs for 2021 in the Eastern Conference
-|TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |1   |BKN        |1           |1  |1.000000e+00|
 |9   |MIL        |1           |1  |1.000000e+00|
 |12  |PHI        |1           |1  |1.000000e+00|
@@ -125,8 +125,8 @@ Predictions for which teams makes the playoffs for 2021 in the Eastern Conferenc
 LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE WESTERN CONFERENCE:
 
 Predictions for which teams makes the playoffs for 2021 in the Western Conference:
-|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |14  |UTA        |1           |1     |0.988914|
 |10  |PHX        |1           |1     |0.984372|
 |5   |LAL        |1           |1     |0.983565|
@@ -148,8 +148,8 @@ Predictions for which teams makes the playoffs for 2021 in the Western Conferenc
 SVM MODEL FOR THE 2021 NBA SEASON IN THE WESTERN CONFERENCE
 
 Predictions for which teams makes the playoffs for 2021 in the Western Conference
-|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |1   |DEN        |1           |1  |1.000000e+00|
 |4   |LAC        |1           |1  |1.000000e+00|
 |5   |LAL        |1           |1  |1.000000e+00|
@@ -170,8 +170,8 @@ Predictions for which teams makes the playoffs for 2021 in the Western Conferenc
 LOGISTIC REGRESSION MODEL FOR THE 2022 NBA SEASON IN THE EASTERN CONFERENCE:
 
 Predictions for which teams makes the playoffs for 2022 in the Eastern Conference:
-|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |4   |CHI        |1           |1     |0.985217|
 |1   |BKN        |1           |1     |0.979093|
 |9   |MIL        |1           |1     |0.974610|
@@ -193,8 +193,8 @@ Predictions for which teams makes the playoffs for 2022 in the Eastern Conferenc
 SVM MODEL FOR THE 2022 NBA SEASON IN THE EASTERN CONFERENCE
 
 Predictions for which teams makes the playoffs for 2022 in the Eastern Conference:
-|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |4   |CHI        |1           |1  |1.000000e+00|
 |12  |PHI        |1           |1  |1.000000e+00|
 |9   |MIL        |1           |1  |1.000000e+00|
@@ -214,8 +214,8 @@ Predictions for which teams makes the playoffs for 2022 in the Eastern Conferenc
 LOGISTIC REGRESSION MODEL FOR THE 2022 NBA SEASON IN THE WESTERN CONFERENCE
 
 Predictions for which teams makes the playoffs for 2022 in the Western Conference:
-|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
-| ------------- | ------------- | ------------- | ------------- | 
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |10  |PHX        |1           |1     |0.994681|
 |14  |UTA        |1           |1     |0.989087|
 |2   |GSW        |1           |1     |0.987890|
@@ -235,7 +235,8 @@ Predictions for which teams makes the playoffs for 2022 in the Western Conferenc
 SVM MODEL FOR THE 2022 NBA SEASON IN THE WESTERN CONFERENCE
 
 Predictions for which teams makes the playoffs for 2022 in the Western Conference:
-|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+|NUMBER|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 |2   |GSW        |1           |1  |1.000000e+00|
 |10  |PHX        |1           |1  |1.000000e+00|
 |14  |UTA        |1           |1  |1.000000e+00|
