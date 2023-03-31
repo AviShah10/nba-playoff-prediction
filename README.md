@@ -16,37 +16,54 @@ Our data on a team's average statistics is from this [Kaggle dataset](https://ww
 
 The Kaggle dataset we are using for season averages for teams does not include any data on whether or not a team made the playoffs. We need this data in train and test our models, so we decided to pull playoff data from [Basketball Reference](https://www.basketball-reference.com/), which we extracted through a web data scraper.
 
+Additionally, the Kaggle dataset had no distinguishment between teams in the Eastern and Western Conferences, which have separate scheduling rules and playoffs. As a result, we decided to divide the Kaggle dataset into East and West subdatasets to run the algorithm on.
+
 
 ## Methods:
 
 ### Data Cleaning/Pre-processing
 
+RELOCATED/EXPANDED TEAMS:
+There were a few issues with the dataset in handling teams that moved cities and/or conferences, but Kaggle included a 'team_id' column which was used in querying to keep consistent with present day team names. 
+
 CHARLOTTE/NEW ORLEANS:
-Charlotte was an eastern conference team in 2000, 2001, 2002. Changed to New Orleans for 2003, 2004 but stayed in eastern conference. We removed 2004 due to midseason shift but in 2003 New Orleans (NOP) was shifted to the east and the first few years only have 29 teams up until the expansion.
+A particularly difficult situation emerged as Charlotte was an eastern conference team in 2000, 2001, 2002, and 2003. It changed to New Orleans for 2004, 2005 but stayed in eastern conference. We removed the 2005 season's data due to midseason shift to a new city/conference but in 2004 New Orleans (NOP) was shifted to the east and the first few years only have 29 teams up until the expansion.
 
-Features we parsed and kept from the Kaggle dataset:
+FEATURE EXTRACTION (MID-SEASON AVERAGES):
+In the Kaggle dataset, we had a multi-step process for creating the statistical averages for each team at the midpoint of every season:
+1. We first took a dataframe including every game from the 2000 season until 2022. 
+2. We then divided it into 30 dataframes of each team's total games from 2000 to 2022. 
+3. We divided each team's games into their respective seasons .
+4. We then took the average of the first 41 games (first half) for each season. (NOTE: Since Kaggle did not have statistics for W/L%, we replaced the dataset's Win/Loss column values ('W', or 'L') with an int 1/0 that could be numerically averaged into a Win-loss percentage, and the Home/away location into an int 1/0 as well. 
+5. Afterwards, we merged each of the season's team averages into separate east and west dataframes. The result was a dataframe for the east and west teams' statistical averages after half of the season had finished.
+6. We sorted teams alphabetically (to stay consistent with the ordering for the playoff data from [Basketball Reference](https://www.basketball-reference.com/), and created a training set of data using seasons 2000-2019, and a testing set of data from 2020-2022.
 
-- Win-loss percentage (WLPCT)
-- Home versus away game ratio (MATCHUP)
-- Field goal makes (FGM)
-- Field goal attempts (FGA)
-- Field goal percentage (FGPCT)
-- 3 point field goal makes (FG3M)
-- 3 point field goal attempts (FG3A)
-- 3 point field goal percentage (FG3PCT)
-- Free throw makes (FTM)
-- Free throw attempts (FTA)
-- Free throw percentage (FTPCT)
-- Offensive rebounds (OREB)
-- Defensive rebounds (DREB)
-- Rebounds (REB)
-- Assists (AST)
-- Steals (STL)
-- Blocks (BLK)
-- Turnovers (TOV)
-- Personal fouls (PF)
-- Points (PTS)
-- Plus-minus ratio (PM)
+  Features we parsed and kept from the Kaggle dataset:
+  - Win-loss percentage (WLPCT)
+  - Home versus away game ratio (MATCHUP)
+  - Field goal makes (FGM)
+  - Field goal attempts (FGA)
+  - Field goal percentage (FGPCT)
+  - 3 point field goal makes (FG3M)
+  - 3 point field goal attempts (FG3A)
+  - 3 point field goal percentage (FG3PCT)
+  - Free throw makes (FTM)
+  - Free throw attempts (FTA)
+  - Free throw percentage (FTPCT)
+  - Offensive rebounds (OREB)
+  - Defensive rebounds (DREB)
+  - Rebounds (REB)
+  - Assists (AST)
+  - Steals (STL)
+  - Blocks (BLK)
+  - Turnovers (TOV)
+  - Personal fouls (PF)
+  - Points (PTS)
+  - Plus-minus points differential (PM)
+
+FEATURE SELECTION:
+We experimented with some backwards feature selection, particularly by removing some features that we believed to be less relevant (i.e. 'TEAM', 'YEAR', and 'MATCHUP' ratio, although we re-included 'MATCHUP') in order to see if it led to better results. We plan in the coming weeks to continue with backwards feature selection using research to determine what statistics are less relevant. We also plan to expand to include some additional features, using advanced metrics such as true shooting percentage, defensive efficience, etc. to see if those may also help with our model performance.
+
 
 ### Training Models
 
@@ -73,6 +90,16 @@ Ma, Nigel. “NBA Playoff Prediction Using Several Machine Learning Methods.” 
 Wang, Jingru, and Qishi Fan. “Application of Machine Learning on NBA Data Sets.” Journal of Physics: Conference Series, vol. 1802, no. 3, 1 Mar. 2021, p. 032036, https://doi.org/10.1088/1742-6596/1802/3/032036. 
 
 
-## Contributions:
+## Contributions (Midterm; for Project Proposal contributions please see the Proposal README):
+
+Samuel: Was in charge of later data cleaning and processing, such as troubleshooting issues with conferences/team relocations, averaging the teams' midseason stats, and reshaping to be compatible with the learning models. Helped with the implementation of the models by fixing any errors that could be dealt with on the data side such as mismatching rows, incorrect labeling, etc. and contributed in writing the 'Data Collection' and 'Methods' sections of this report.
+
+Divyesh: Was in charge of the early data cleaning and processing. Parsed through the game.csv file and took the 2000-2022 seasons and split into each team's games. Also helped with the creation of SVM and logistic regression models and ...
+
+Avi: Was in charge of the application of the learning models to the cleaned data. Implemented scikit.learn in python to train data to predict playoff results based on midseason averages. Was critically important in communicating any issues with the dataset that needed fixing, as well as helping interpret results for the analysis and graphs ...
+
+Param:
+
+Saahas:
 
 
