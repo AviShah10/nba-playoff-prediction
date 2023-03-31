@@ -74,7 +74,7 @@ For both our logistic regression and SVM models, we proceeded with the same foll
 So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
 | TEAM | PLAYOFF | PREDICTION | PROBABILITY|
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | 
 |12 |PHI       |1          |1    |0.997403|
 |1   |BKN        |1           |1     |0.997387|
 |9   |MIL        |1           |1     |0.997174|
