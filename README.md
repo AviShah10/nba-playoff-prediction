@@ -73,9 +73,19 @@ For both our logistic regression and SVM models, we proceeded with the same foll
 
 So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
+
+## Results and Discussion:
+
+Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
+
+For both our logistic regression and SVM models, we proceeded with the same following steps. We used the season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
+
+LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE:
+
+Predictions for which teams makes the playoffs for 2021 in the Eastern Conference:
 | TEAM | PLAYOFF | PREDICTION | PROBABILITY|
 | ------------- | ------------- | ------------- | ------------- | 
-|12 |PHI       |1          |1    |0.997403|
+|12  |PHI        |1           |1     |0.997403|
 |1   |BKN        |1           |1     |0.997387|
 |9   |MIL        |1           |1     |0.997174|
 |0   |ATL        |1           |1     |0.939988|
@@ -91,20 +101,32 @@ So far, we have ran the models on all features in our dataset including WLPCT, M
 |11  |ORL        |0           |0     |0.097384|
 |5   |CLE        |0           |0     |0.066688|
 
+SVM MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE:
+
+Predictions for which teams makes the playoffs for 2021 in the Eastern Conference
+|TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|1   |BKN        |1           |1  |1.000000e+00|
+|9   |MIL        |1           |1  |1.000000e+00|
+|12  |PHI        |1           |1  |1.000000e+00|
+|0   |ATL        |1           |1  |1.000000e+00|
+|7   |IND        |0           |1  |9.999999e-01|
+|13  |TOR        |0           |1  |9.999874e-01|
+|2   |BOS        |1           |1  |9.974219e-01|
+|8   |MIA        |1           |1  |9.964594e-01|
+|10  |NYK        |1           |1  |9.751177e-01|
+|3   |CHA        |0           |1  |9.674145e-01|
+|4   |CHI        |0           |0  |3.175295e-01|
+|14  |WAS        |1           |0  |6.718422e-04|
+|6   |DET        |0           |0  |1.458999e-04|
+|11  |ORL        |0           |0  |1.156647e-06|
+|5   |CLE        |0           |0  |1.963654e-07|
 
 
 
 
 
 
-
-
-
-## Results and Discussion:
-
-Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
-
-For both our logistic regression and SVM models, we proceeded with the same following steps. We used the season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
 
 So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
