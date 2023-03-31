@@ -99,24 +99,42 @@ There could be many explanations for this, one could be the type of shot, a 2P o
 
 Below we see 3 charts, Field Goals Attempted by year for the East, Field Goals Attempted by year for the West & Field Goals Attempted by year for the East and West. Pre-2010 we see FGA fluctuate but mainly stay within its bounds. We have a couple outliers with teams experimenting different playing styles, which start to pick up in the coming years. As we look at the early 2010s, the FGAs start to increase but it isn't till around 2018 when the overall league average for FGA jumps. Infact within the 2020 season, most of the teams FGAs are above the teams from the 2000s. However when we look at the playoff clinching factor, there's no clear pattern for more Field Goals Attempted equating to making the playoffs.
 
+<img width="281" alt="image" src="https://user-images.githubusercontent.com/126113216/229228470-982f26f9-c286-4f9a-a252-1acb4280b643.png">
+
+
 Next, we explore how Field Goal Percentage for each team has an impact on those who make and dont make the playoffs. The next 3 charts are Field Goal Percentage by year for the East, Field Goal Percentage by year for the West & Field Goal Percentage by year for the East and West. Examining the FG%s by year, both the east and the west are a bit chaotic and a clear distinction can not be made pre-2010, however once we get past the 2010s, every year most of the teams that make the playoffs, have higher FG%s relative to those who were not able to make the playoffs. 
 
-<img width="365" alt="image" src="https://user-images.githubusercontent.com/126113216/229227592-5f19c846-6f59-4a47-b945-b40a03584ced.png">
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/126113216/229227908-b23c509a-4e40-4fa2-b2a4-13ec479dc602.png">
 
-Next, we explore how Field Goal Percentage for each team has an impact on those who make and dont make the playoffs. The next 3 charts are Field Goal Percentage by year for the East, Field Goal Percentage by year for the West & Field Goal Percentage by year for the East and West. Examining the FG%s by year, both the east and the west are a bit chaotic and a clear distinction can not be made pre-2010, however once we get past the 2010s, every year most of the teams that make the playoffs, have higher FG%s relative to those who were not able to make the playoffs. 
+This sparked some thought as we wanted to explore if 3pt shots had any indictor of making the playoffs. We explore 3 point field goal attempts (FG3A) & 3 point field goal percentage (FG3PCT) for the east and west in the next coupld of graphs. This has shown us that for the league, there has been a general increase in the last 10 years in FG3A, but not a huge differenciater for playoff success. We see a similar trend in FG3PCT as well. We see that in FG3PCT, the range of values becomes more narrow as time goes on and generally that there is no clear distinction in teams that make it to the playoffs based on this particular feature.
 
-This sparked some thought as we wanted to explore if 3pt shots had any indictor of making the playoffs. We explore 3 point field goal attempts (FG3A) & 3 point field goal percentage (FG3PCT) for the east and west in the next coupld of graphs. This has shown us that for the league, there has been a general increase in the last 10 years in FG3A, but not a huge differenciater for playoff success. We see a similar trend in FG3PCT as well. We see that in FG3PCT, the range of values becomes more narrow as time goes on and generally that there is no clear distinction in teams that make it to the playoffs based on this particular feature
+<img width="278" alt="image" src="https://user-images.githubusercontent.com/126113216/229228958-a04aad16-6266-4e09-8b46-ab02ee69b38a.png">
+<img width="299" alt="image" src="https://user-images.githubusercontent.com/126113216/229229033-0abdee2a-11a3-4c01-8c28-95617c6228ea.png">
+
+
 
 Moving onto the Defensive ability of a team, we would like to compare their Block and steals stats with those who made and did not make the playoffs. 
 The next couple graphs explore this avenue. Overall, we see that for Blocks and Steals we have a very small subtle difference between those teams that make it compared to those that dont. While this could be a factor as to teams make the playoffs, this does not seem like the biggest driving force. 
 
+<img width="262" alt="image" src="https://user-images.githubusercontent.com/126113216/229229180-baf73a25-44b2-48a8-aa9b-142533757c65.png">
+<img width="263" alt="image" src="https://user-images.githubusercontent.com/126113216/229229234-fc70b9ac-1f84-4b57-8fd1-eb175e09a102.png">
+
+
 Below, we look at how rebounds have an impact on a team's playoff success. In the earlier years, we see that there was a distinction with a couple of outliers, but as time moved forward, it became less definitive. Teams with a lot of rebounds didnt necessarily make the playoffs and those teams with less rebounds could still make it. Overall, currently, rebounds are not a good indicator of playoff sucess. 
 
+<img width="269" alt="image" src="https://user-images.githubusercontent.com/126113216/229229309-6131f47d-64f5-45a5-abfa-1aa0600d1a51.png">
+
+
 We wanted to see how Plus-minus points differential (PM) and Win-loss percentage (WLPCT) changed with time. We saw that both these factors were a clear indicator of Playoff attainment success. Regarding PM, there is a pretty clean cut at the 0 point with teams who have a Positive differencal, generally make the playoffs while those with negative differencials end up missing the playoffs. A similar distinction is made in Win-loss with teams higher than .5 end up making the playoffs and those who have a negative record end up missing the playoffs. 
+
+<img width="273" alt="image" src="https://user-images.githubusercontent.com/126113216/229229361-b2c9a9d6-2dd3-4c7c-be4b-c07d8ba82995.png">
+<img width="263" alt="image" src="https://user-images.githubusercontent.com/126113216/229229403-6f186943-2da9-404e-8d91-abfa16a7fecc.png">
+
 
 
 In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see that teams who did not make it tend to have negative WLPCT & PM and a lower FGPCT on the left of the chart, while teams who did make it tend to have positive WLPCT & PM and a higher FGPCT on the right of the chart. These are our top 3 indicators of playoff attainment success.
 
+![image](https://user-images.githubusercontent.com/126113216/229229486-428d4b41-ff8f-4fca-b5c0-294c2160b5f6.png)
 
 ## Scholarly References:
 
