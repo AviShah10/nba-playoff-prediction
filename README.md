@@ -166,7 +166,89 @@ Predictions for which teams makes the playoffs for 2021 in the Western Conferenc
 |7   |MIN        |0           |0  |1.000000e-07|
 
 
+LOGISTIC REGRESSION MODEL FOR THE 2022 NBA SEASON IN THE EASTERN CONFERENCE:
 
+Predictions for which teams makes the playoffs for 2022 in the Eastern Conference:
+|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|4   |CHI        |1           |1     |0.985217|
+|1   |BKN        |1           |1     |0.979093|
+|9   |MIL        |1           |1     |0.974610|
+|12  |PHI        |1           |1     |0.973028|
+|8   |MIA        |1           |1     |0.956070|
+|5   |CLE        |0           |1     |0.949933|
+|3   |CHA        |0           |1     |0.933821|
+|2   |BOS        |1           |1     |0.834638|
+|14  |WAS        |0           |1     |0.735182|
+|0   |ATL        |1           |1     |0.719648|
+|13  |TOR        |1           |1     |0.709419|
+|10  |NYK        |0           |1     |0.600157|
+|7   |IND        |0           |1     |0.512018|
+|6   |DET        |0           |0     |0.013121|
+|11  |ORL        |0           |0     |0.007647|
+
+
+
+SVM MODEL FOR THE 2022 NBA SEASON IN THE EASTERN CONFERENCE
+
+Predictions for which teams makes the playoffs for 2022 in the Eastern Conference:
+|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|4   |CHI        |1           |1  |1.000000e+00|
+|12  |PHI        |1           |1  |1.000000e+00|
+|9   |MIL        |1           |1  |1.000000e+00|
+|1   |BKN        |1           |1  |1.000000e+00|
+|8   |MIA        |1           |1  |1.000000e+00|
+|5   |CLE        |0           |1  |1.000000e+00|
+|3   |CHA        |0           |1  |1.000000e+00|
+|2   |BOS        |1           |1  |9.972652e-01|
+|13  |TOR        |1           |1  |9.782052e-01|
+|14  |WAS        |0           |1  |8.719598e-01|
+|0   |ATL        |1           |1  |7.796768e-01|
+|10  |NYK        |0           |1  |6.882436e-01|
+|7   |IND        |0           |0  |5.381694e-02|
+|6   |DET        |0           |0  |1.000000e-07|
+|11  |ORL        |0           |0  |1.000000e-07|
+
+LOGISTIC REGRESSION MODEL FOR THE 2022 NBA SEASON IN THE WESTERN CONFERENCE
+
+Predictions for which teams makes the playoffs for 2022 in the Western Conference:
+|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|10  |PHX        |1           |1     |0.994681|
+|14  |UTA        |1           |1     |0.989087|
+|2   |GSW        |1           |1     |0.987890|
+|6   |MEM        |1           |1     |0.964283|
+|5   |LAL        |0           |1     |0.773361|
+|1   |DEN        |1           |1     |0.730809|
+|0   |DAL        |1           |1     |0.586451|
+|13  |SAS        |0           |1     |0.530227|
+|4   |LAC        |0           |1     |0.506697|
+|7   |MIN        |1           |0     |0.383722|
+|11  |POR        |0           |0     |0.226017|
+|12  |SAC        |0           |0     |0.162125|
+|8   |NOP        |1           |0     |0.079964|
+|9   |OKC        |0           |0     |0.015447|
+|3   |HOU        |0           |0     |0.014687|
+
+SVM MODEL FOR THE 2022 NBA SEASON IN THE WESTERN CONFERENCE
+Predictions for which teams makes the playoffs for 2022 in the Western Conference:
+|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+|2   |GSW        |1           |1  |1.000000e+00|
+|10  |PHX        |1           |1  |1.000000e+00|
+|14  |UTA        |1           |1  |1.000000e+00|
+|6   |MEM        |1           |1  |1.000000e+00|
+|1   |DEN        |1           |1  |9.884713e-01|
+|5   |LAL        |0           |1  |9.494208e-01|
+|0   |DAL        |1           |1  |8.750574e-01|
+|13  |SAS        |0           |0  |1.945591e-01|
+|4   |LAC        |0           |0  |1.093770e-01|
+|7   |MIN        |1           |0  |1.728664e-02|
+|11  |POR        |0           |0  |1.126423e-04|
+|12  |SAC        |0           |0  |2.206874e-05|
+|8   |NOP        |1           |0  |1.263066e-06|
+|3   |HOU        |0           |0  |1.000000e-07|
+|9   |OKC        |0           |0  |1.000000e-07|
 
 
 
