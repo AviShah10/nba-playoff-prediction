@@ -88,7 +88,10 @@ For both our logistic regression and SVM models, we proceeded with the same foll
 So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
 Visualizations:
-While creating our dataset we decided to run some visualizations to get an understanding of how the data is trending. Our next couple visualizations helps show a difference in 3 key features from playoff bound teams and non-playoff bound teams. 
+While creating our dataset we decided to run some visualizations to get an understanding of how the data is trending. Our next couple visualizations helps show a difference in many key features from playoff bound teams and non-playoff bound teams. 
+
+RED indicates playoff clinch
+BLUE indicares playoff miss
 
 Here we're comparing Field Goals made to Field Goals attempted. We see a general positive trend that with more shots attempted,the more shots made. But when examining if there's a significant difference in more shots made to making the playoffs, there seems to be a pretty even spread with good shooting teams missing the playoffs and poorly shooting teams clinching the playoffs.
 
@@ -105,7 +108,10 @@ The next couple graphs explore this avenue. Overall, we see that for Blocks and 
 
 Below, we look at how rebounds have an impact on a team's playoff success. In the earlier years, we see that there was a distinction with a couple of outliers, but as time moved forward, it became less definitive. Teams with a lot of rebounds didnt necessarily make the playoffs and those teams with less rebounds could still make it. Overall, currently, rebounds are not a good indicator of playoff sucess. 
 
-Lastly, we wanted to see how Plus-minus points differential (PM) and Win-loss percentage (WLPCT) changed with time. We saw that both these factors were a clear indicator of Playoff attainment success. Regarding PM, there is a pretty clean cut at the 0 point with teams who have a Positive differencal, generally make the playoffs while those with negative differencials end up missing the playoffs. A similar distinction is made in Win-loss with teams higher than .5 end up making the playoffs and those who have a negative record end up missing the playoffs. 
+We wanted to see how Plus-minus points differential (PM) and Win-loss percentage (WLPCT) changed with time. We saw that both these factors were a clear indicator of Playoff attainment success. Regarding PM, there is a pretty clean cut at the 0 point with teams who have a Positive differencal, generally make the playoffs while those with negative differencials end up missing the playoffs. A similar distinction is made in Win-loss with teams higher than .5 end up making the playoffs and those who have a negative record end up missing the playoffs. 
+
+
+In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see that teams who did not make it tend to have negative WLPCT & PM and a lower FGPCT on the left of the chart, while teams who did make it tend to have positive WLPCT & PM and a higher FGPCT on the right of the chart. These are our top 3 indicators of playoff attainment success.
 
 
 ## Scholarly References:
@@ -125,7 +131,7 @@ Divyesh: Was in charge of the early data cleaning and processing. Parsed through
 
 Avi: Was in charge of the application of the learning models to the cleaned data. Implemented scikit.learn in python to train data to predict playoff results based on midseason averages. Was critically important in communicating any issues with the dataset that needed fixing, as well as helping interpret results for the analysis and graphs ...
 
-Param:
+Param: Was in charge of creating the visuals and the explanations for why these visuals are useful and what we will learn from them. Through this analysis, we gained a better understadning as to our goals/aims for the coming months. Was a huge contributor of writing the "Results and Discussion" of this report
 
 Saahas:
 
