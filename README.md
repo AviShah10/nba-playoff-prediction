@@ -81,6 +81,33 @@ We expect to see at least one supervised or unsupervised method implemented and 
 You MUST include visualizations of your dataset (if possible) and your results. Visualizations include graphs, charts, tables. Code snippets do not count as visualizations. You can use Matplotlib or Seaborn to create your visualizations. We recommend using Plotly for interactive visualizations in Python as well as interactive visualizations on your website.
 (PLEASE FILL THIS WITH NECESSARY FIGURES, ETC.)
 
+Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
+
+For both our logistic regression and SVM models, we proceeded with the same following steps. We used the season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
+
+So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
+
+Visualizations:
+While creating our dataset we decided to run some visualizations to get an understanding of how the data is trending. Our next couple visualizations helps show a difference in 3 key features from playoff bound teams and non-playoff bound teams. 
+
+Here we're comparing Field Goals made to Field Goals attempted. We see a general positive trend that with more shots attempted,the more shots made. But when examining if there's a significant difference in more shots made to making the playoffs, there seems to be a pretty even spread with good shooting teams missing the playoffs and poorly shooting teams clinching the playoffs.
+
+There could be many explanations for this, one could be the type of shot, a 2P or a 3P may add to a team's successes. Attempting and scoring Higher valued shots may be an explanation as to why teams make the playoffs. Another could be a team's defensive abilities that help shut down high scoring teams but scoring just enough to win. This could be explained when we look at a team's STL & BLK, and the opposing team's TOV & PF. Lastly, another explanation could be a high volume of rebounds on the offensive and defensive end which allows for more attempts to exist and eventually score. A further analyisis on the REB, OREB and DREB would be useful for this.
+
+Below we see 3 charts, Field Goals Attempted by year for the East, Field Goals Attempted by year for the West & Field Goals Attempted by year for the East and West. Pre-2010 we see FGA fluctuate but mainly stay within its bounds. We have a couple outliers with teams experimenting different playing styles, which start to pick up in the coming years. As we look at the early 2010s, the FGAs start to increase but it isn't till around 2018 when the overall league average for FGA jumps. Infact within the 2020 season, most of the teams FGAs are above the teams from the 2000s. However when we look at the playoff clinching factor, there's no clear pattern for more Field Goals Attempted equating to making the playoffs.
+
+Next, we explore how Field Goal Percentage for each team has an impact on those who make and dont make the playoffs. The next 3 charts are Field Goal Percentage by year for the East, Field Goal Percentage by year for the West & Field Goal Percentage by year for the East and West. Examining the FG%s by year, both the east and the west are a bit chaotic and a clear distinction can not be made pre-2010, however once we get past the 2010s, every year most of the teams that make the playoffs, have higher FG%s relative to those who were not able to make the playoffs. 
+
+This sparked some thought as we wanted to explore if 3pt shots had any indictor of making the playoffs. We explore 3 point field goal attempts (FG3A) & 3 point field goal percentage (FG3PCT) for the east and west in the next coupld of graphs. This has shown us that for the league, there has been a general increase in the last 10 years in FG3A, but not a huge differenciater for playoff success. We see a similar trend in FG3PCT as well. We see that in FG3PCT, the range of values becomes more narrow as time goes on and generally that there is no clear distinction in teams that make it to the playoffs based on this particular feature
+
+Moving onto the Defensive ability of a team, we would like to compare their Block and steals stats with those who made and did not make the playoffs. 
+The next couple graphs explore this avenue. Overall, we see that for Blocks and Steals we have a very small subtle difference between those teams that make it compared to those that dont. While this could be a factor as to teams make the playoffs, this does not seem like the biggest driving force. 
+
+Below, we look at how rebounds have an impact on a team's playoff success. In the earlier years, we see that there was a distinction with a couple of outliers, but as time moved forward, it became less definitive. Teams with a lot of rebounds didnt necessarily make the playoffs and those teams with less rebounds could still make it. Overall, currently, rebounds are not a good indicator of playoff sucess. 
+
+Lastly, we wanted to see how Plus-minus points differential (PM) and Win-loss percentage (WLPCT) changed with time. We saw that both these factors were a clear indicator of Playoff attainment success. Regarding PM, there is a pretty clean cut at the 0 point with teams who have a Positive differencal, generally make the playoffs while those with negative differencials end up missing the playoffs. A similar distinction is made in Win-loss with teams higher than .5 end up making the playoffs and those who have a negative record end up missing the playoffs. 
+
+
 ## Scholarly References:
 
 Kohli, Ikjyot Singh. “Finding Common Characteristics among NBA Playoff Teams: A Machine Learning Approach.” SSRN Electronic Journal, 2016, https://doi.org/10.2139/ssrn.2764396.
