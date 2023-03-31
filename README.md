@@ -134,7 +134,7 @@ We wanted to see how Plus-minus points differential (PM) and Win-loss percentage
 
 In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see that teams who did not make it tend to have negative WLPCT & PM and a lower FGPCT on the left of the chart, while teams who did make it tend to have positive WLPCT & PM and a higher FGPCT on the right of the chart. These are our top 3 indicators of playoff attainment success.
 
-![image](https://user-images.githubusercontent.com/126113216/229229486-428d4b41-ff8f-4fca-b5c0-294c2160b5f6.png)
+<img width="294" alt="image" src="https://user-images.githubusercontent.com/126113216/229229752-95b20e54-b152-4676-b6b9-7bb664876fa5.png">
 
 ## Scholarly References:
 
@@ -157,4 +157,4 @@ Param: Was in charge of creating the visuals and the explanations for why these 
 
 Saahas: Was in charge of creating the python code for the visuals and helped with the explanations for why these visuals are useful and what learned from them. Created all the scatterplots and the 3-D graphs using matplotlib. Assisted with writing the "Results and Discussion" portion of this report, as well as helping interpret the results from the analysis and the plots ...
 
-<img width="386" alt="Screen Shot 2023-03-31 at 16 48 22" src="https://user-images.githubusercontent.com/126113216/229227142-3db540cb-8ccf-4ce4-8fa8-1f6bc0b3fbaf.png">
+
