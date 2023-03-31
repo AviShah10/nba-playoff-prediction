@@ -133,6 +133,6 @@ Avi: Was in charge of the application of the learning models to the cleaned data
 
 Param: Was in charge of creating the visuals and the explanations for why these visuals are useful and what we will learn from them. Through this analysis, we gained a better understadning as to our goals/aims for the coming months. Was a huge contributor of writing the "Results and Discussion" of this report ...
 
-Saahas:
+Saahas: Was in charge of creating the python code for the visuals and helped with the explanations for why these visuals are useful and what learned from them. Created all the scatterplots and the 3-D graphs using matplotlib. Assisted with writing the "Results and Discussion" portion of this report, as well as helping interpret the results from the analysis and the plots ...
 
 
