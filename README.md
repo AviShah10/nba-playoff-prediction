@@ -146,6 +146,7 @@ Predictions for which teams makes the playoffs for 2021 in the Western Conferenc
 
 
 SVM MODEL FOR THE 2021 NBA SEASON IN THE WESTERN CONFERENCE
+
 Predictions for which teams makes the playoffs for 2021 in the Western Conference
 |   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
 | ------------- | ------------- | ------------- | ------------- | 
@@ -232,6 +233,7 @@ Predictions for which teams makes the playoffs for 2022 in the Western Conferenc
 |3   |HOU        |0           |0     |0.014687|
 
 SVM MODEL FOR THE 2022 NBA SEASON IN THE WESTERN CONFERENCE
+
 Predictions for which teams makes the playoffs for 2022 in the Western Conference:
 |   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
 |2   |GSW        |1           |1  |1.000000e+00|
