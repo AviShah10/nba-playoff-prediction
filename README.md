@@ -84,6 +84,7 @@ LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE EASTERN CONFERENCE:
 
 Predictions for which teams makes the playoffs for 2021 in the Eastern Conference:
 |NUMBER| TEAM | PLAYOFF | PREDICTION | PROBABILITY|
+
 | ------------- | ------------- | ------------- | ------------- | ------------- | 
 |12  |PHI        |1           |1     |0.997403|
 |1   |BKN        |1           |1     |0.997387|
