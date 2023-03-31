@@ -75,12 +75,6 @@ So far, we have ran the models on all features in our dataset including WLPCT, M
 
 ## Results and Discussion:
 
-REQUIREMENTS AS PER THE ASSIGNMENT DESCRIPTION:
-We expect to see data pre-processing in your project such as feature selection (Forward or backward feature selection, dimensionality reduction methods such as PCA, Lasso, LDA, .. ), taking care of missing features in your dataset, …
-We expect to see at least one supervised or unsupervised method implemented and the results need to be studied in details. For example evaluating your predictive model performance using different metrics (take a look at ML Metrics)
-You MUST include visualizations of your dataset (if possible) and your results. Visualizations include graphs, charts, tables. Code snippets do not count as visualizations. You can use Matplotlib or Seaborn to create your visualizations. We recommend using Plotly for interactive visualizations in Python as well as interactive visualizations on your website.
-(PLEASE FILL THIS WITH NECESSARY FIGURES, ETC.)
-
 Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
 
 For both our logistic regression and SVM models, we proceeded with the same following steps. We used the season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
@@ -92,10 +86,6 @@ While creating our dataset we decided to run some visualizations to get an under
 
 RED indicates playoff clinch
 BLUE indicares playoff miss
-
-Here we're comparing Field Goals made to Field Goals attempted. We see a general positive trend that with more shots attempted,the more shots made. But when examining if there's a significant difference in more shots made to making the playoffs, there seems to be a pretty even spread with good shooting teams missing the playoffs and poorly shooting teams clinching the playoffs.
-
-There could be many explanations for this, one could be the type of shot, a 2P or a 3P may add to a team's successes. Attempting and scoring Higher valued shots may be an explanation as to why teams make the playoffs. Another could be a team's defensive abilities that help shut down high scoring teams but scoring just enough to win. This could be explained when we look at a team's STL & BLK, and the opposing team's TOV & PF. Lastly, another explanation could be a high volume of rebounds on the offensive and defensive end which allows for more attempts to exist and eventually score. A further analyisis on the REB, OREB and DREB would be useful for this.
 
 Below we see 3 charts, Field Goals Attempted by year for the East, Field Goals Attempted by year for the West & Field Goals Attempted by year for the East and West. Pre-2010 we see FGA fluctuate but mainly stay within its bounds. We have a couple outliers with teams experimenting different playing styles, which start to pick up in the coming years. As we look at the early 2010s, the FGAs start to increase but it isn't till around 2018 when the overall league average for FGA jumps. Infact within the 2020 season, most of the teams FGAs are above the teams from the 2000s. However when we look at the playoff clinching factor, there's no clear pattern for more Field Goals Attempted equating to making the playoffs.
 
