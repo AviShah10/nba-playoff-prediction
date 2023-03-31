@@ -122,6 +122,29 @@ Predictions for which teams makes the playoffs for 2021 in the Eastern Conferenc
 |11  |ORL        |0           |0  |1.156647e-06|
 |5   |CLE        |0           |0  |1.963654e-07|
 
+LOGISTIC REGRESSION MODEL FOR THE 2021 NBA SEASON IN THE WESTERN CONFERENCE:
+
+Predictions for which teams makes the playoffs for 2021 in the Western Conference:
+|   TEAM  |PLAYOFF  |PREDICTION  |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|14  |UTA        |1           |1     |0.988914|
+|10  |PHX        |1           |1     |0.984372|
+|5   |LAL        |1           |1     |0.983565|
+|4   |LAC        |1           |1     |0.977341|
+|1   |DEN        |1           |1     |0.970961|
+|6   |MEM        |1           |1     |0.816397|
+|11  |POR        |1           |1     |0.791275|
+|13  |SAS        |0           |1     |0.768273|
+|0   |DAL        |1           |1     |0.749100|
+|2   |GSW        |0           |1     |0.697789|
+|8   |NOP        |0           |1     |0.672540|
+|12  |SAC        |0           |0     |0.305724|
+|9   |OKC        |0           |0     |0.095603|
+|7   |MIN        |0           |0     |0.031277|
+|3   |HOU        |0           |0     |0.022469|
+
+
+
 
 
 
