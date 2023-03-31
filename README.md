@@ -145,6 +145,25 @@ Predictions for which teams makes the playoffs for 2021 in the Western Conferenc
 
 
 
+SVM MODEL FOR THE 2021 NBA SEASON IN THE WESTERN CONFERENCE
+Predictions for which teams makes the playoffs for 2021 in the Western Conference
+|   TEAM  |PLAYOFF  |PREDICTION   |PROBABILITY|
+| ------------- | ------------- | ------------- | ------------- | 
+|1   |DEN        |1           |1  |1.000000e+00|
+|4   |LAC        |1           |1  |1.000000e+00|
+|5   |LAL        |1           |1  |1.000000e+00|
+|10  |PHX        |1           |1  |1.000000e+00|
+|14  |UTA        |1           |1  |1.000000e+00|
+|6   |MEM        |1           |1  |9.999915e-01|
+|13  |SAS        |0           |1  |9.714620e-01|
+|0   |DAL        |1           |1  |9.612282e-01|
+|11  |POR        |1           |1  |9.572791e-01|
+|2   |GSW        |0           |1  |8.828647e-01|
+|8   |NOP        |0           |1  |7.593466e-01|
+|12  |SAC        |0           |0  |6.203786e-04|
+|9   |OKC        |0           |0  |1.677006e-06|
+|3   |HOU        |0           |0  |1.000000e-07|
+|7   |MIN        |0           |0  |1.000000e-07|
 
 
 
