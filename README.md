@@ -73,6 +73,33 @@ For both our logistic regression and SVM models, we proceeded with the same foll
 
 So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
+| TEAM | PLAYOFF | PREDICTION | PROBABILITY|
+| ------------- | ------------- |
+|12 |PHI       |1          |1    |0.997403|
+|1   |BKN        |1           |1     |0.997387|
+|9   |MIL        |1           |1     |0.997174|
+|0   |ATL        |1           |1     |0.939988|
+|7   |IND        |0           |1     |0.912472|
+|13  |TOR        |0           |1     |0.845891|
+|2   |BOS        |1           |1     |0.839305|
+|8   |MIA        |1           |1     |0.813625|
+|3   |CHA        |0           |1     |0.776989|
+|10  |NYK        |1           |1     |0.748290|
+|4   |CHI        |0           |1     |0.698376|
+|14  |WAS        |1           |0     |0.331704|
+|6   |DET        |0           |0     |0.220183|
+|11  |ORL        |0           |0     |0.097384|
+|5   |CLE        |0           |0     |0.066688|
+
+
+
+
+
+
+
+
+
+
 ## Results and Discussion:
 
 Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
