@@ -24,6 +24,30 @@ The Kaggle dataset we are using for season averages for teams does not include a
 CHARLOTTE/NEW ORLEANS:
 Charlotte was an eastern conference team in 2000, 2001, 2002. Changed to New Orleans for 2003, 2004 but stayed in eastern conference. We removed 2004 due to midseason shift but in 2003 New Orleans (NOP) was shifted to the east and the first few years only have 29 teams up until the expansion.
 
+Features we parsed and kept from the Kaggle dataset:
+
+- Win-loss percentage (WLPCT)
+- Home versus away game ratio (MATCHUP)
+- Field goal makes (FGM)
+- Field goal attempts (FGA)
+- Field goal percentage (FGPCT)
+- 3 point field goal makes (FG3M)
+- 3 point field goal attempts (FG3A)
+- 3 point field goal percentage (FG3PCT)
+- Free throw makes (FTM)
+- Free throw attempts (FTA)
+- Free throw percentage (FTPCT)
+- Offensive rebounds (OREB)
+- Defensive rebounds (DREB)
+- Rebounds (REB)
+- Assists (AST)
+- Steals (STL)
+- Blocks (BLK)
+- Turnovers (TOV)
+- Personal fouls (PF)
+- Points (PTS)
+- Plus-minus ratio (PM)
+
 ### Training Models
 
 Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
