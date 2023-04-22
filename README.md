@@ -304,7 +304,7 @@ To analyze our matrix, we set a threshold of 0.35 to show a fairly important rel
 
 In general, the feature correlation matrix helped narrow down the features that we would focus on, simplifying some of our models and helped us gain a greater understanding about the underlying patterns in the dataset.
 
-<img width="281" alt="image" src="https://drive.google.com/file/d/1oZLTQ3DFAoFC7KMg2KPqzeKVkZryLM52/view?usp=share_link">
+<img width="281" alt="image" src="correlation_matrix.jpeg">
 
 ### Future Work
 
