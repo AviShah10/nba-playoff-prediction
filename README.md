@@ -302,7 +302,9 @@ The correlation matrix tells us about the relationship between the different fea
 
 To analyze our matrix, we set a threshold of 0.35 to show a fairly important relation between the feature and the points scored by that team. The column that we will be focusing on has been highlighted with a box around it in light green. There are certain features that fall below the threshold: PF, TOV, OREB, BLK – indicating that these features do not have a very strong relation with the number of points scored by the team, and thus these features do not play a very crucial role in our models. On the other hand, there are other features like FGM, FGA, FG3M which have a high positive relation with the number of points scored by a team, indicating that these are important features that we would like to focus our models around.
 
-In general, the feature correlation matrix helped narrow down the features that we would focus on, simplifying some of our models and helped us gain a greater understanding about the underlying patterns in the dataset. 
+In general, the feature correlation matrix helped narrow down the features that we would focus on, simplifying some of our models and helped us gain a greater understanding about the underlying patterns in the dataset.
+
+<img width="281" alt="image" src="https://drive.google.com/file/d/1oZLTQ3DFAoFC7KMg2KPqzeKVkZryLM52/view?usp=share_link">
 
 ### Future Work
 
