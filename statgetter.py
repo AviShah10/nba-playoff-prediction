@@ -112,7 +112,7 @@ def getHomeStats(homegame: pd.DataFrame):
 
     return gamedf
 
-# Helper function to get stats from csv if team is at home. Win is 1, loss is 0
+# Helper function to get stats from csv if team is away. Win is 1, loss is 0
 def getAwayStats(awaygame: pd.DataFrame):
     gamedf = awaygame[['wl_away', 'matchup_away', 'fgm_away', 'fga_away', 'fg_pct_away', 
                        'fg3m_away', 'fg3a_away', 'fg3_pct_away', 'ftm_away', 'fta_away', 'ft_pct_away', 'oreb_away', 'dreb_away',
