@@ -66,7 +66,7 @@ dataset2000 = gamesDataframe[gamesDataframe['season_id'] == 22000 - 1]
 # dataset2014 = gamesDataframe[gamesDataframe['season_id'] == 22014 - 1]
 # dataset2015 = gamesDataframe[gamesDataframe['season_id'] == 22015 - 1]
 # dataset2016 = gamesDataframe[gamesDataframe['season_id'] == 22016 - 1]
-# dataset2017 = gamesDataframe[gamesDataframe['season_id'] == 22017 - 1] #2017 data doesn't exist
+# dataset2017 = gamesDataframe[gamesDataframe['season_id'] == 22017 - 1]
 # dataset2018 = gamesDataframe[gamesDataframe['season_id'] == 22018 - 1]
 # dataset2019 = gamesDataframe[gamesDataframe['season_id'] == 22019 - 1]
 # dataset2020 = gamesDataframe[gamesDataframe['season_id'] == 22020 - 1]
@@ -91,7 +91,7 @@ dataset2000.to_csv('./yearly_dataset/dataset2000.csv')
 # dataset2014.to_csv('./yearly_dataset/dataset2014.csv')
 # dataset2015.to_csv('./yearly_dataset/dataset2015.csv')
 # dataset2016.to_csv('./yearly_dataset/dataset2016.csv')
-# dataset2017.to_csv('./yearly_dataset/dataset2017.csv') #2017 data doesn't exist
+# dataset2017.to_csv('./yearly_dataset/dataset2017.csv')
 # dataset2018.to_csv('./yearly_dataset/dataset2018.csv')
 # dataset2019.to_csv('./yearly_dataset/dataset2019.csv')
 # dataset2020.to_csv('./yearly_dataset/dataset2020.csv')
