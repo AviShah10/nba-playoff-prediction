@@ -317,32 +317,47 @@ For Logistic Regression:
   <img width="294" alt="image" src="confusion_matrix/LR_cm.jpeg">
   
   Accuracy = (11+31)/(11+17+1+31) = 0.73
+  
   Precision = 11/(11+1) = 0.92
+  
   Recall = 11/(11+17) = 0.39
+  
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.54
+  
 For SVM:
 
   <img width="294" alt="image" src="confusion_matrix/SVM_cm.jpeg">
   
   Accuracy = (12+31)/(12+16+1+31) = 0.75
+  
   Precision = 12/(12+1) = 0.92
+  
   Recall = 12/(12+16) = 0.43
+  
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.58
+  
 For Decision Tree:
 
   <img width="294" alt="image" src="confusion_matrix/DT_cm.jpeg">
   
   Accuracy = (19+27)/(19+9+5+27) = 0.78
+  
   Precision = 19/(19+5) = 0.79
+  
   Recall = 19/(19+9) = 0.68
+  
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.73
+  
 For Random Forest:
 
   <img width="294" alt="image" src="confusion_matrix/RF_cm.jpeg">
   
   Accuracy = (17+30)/(17+11+2+30) = 0.81
+  
   Precision = 17/(17+2) = 0.89
+  
   Recall = 17/(17+11) = 0.61
+  
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.72
   
 Based on the calculated metrics, the Random Forest model showed the best performance with the highest accuracy, precision, and F1-score. Therefore, it can be concluded that the Random Forest model is the best model to use in predicting whether a team would make the playoffs or not.
