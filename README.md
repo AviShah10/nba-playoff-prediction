@@ -313,6 +313,7 @@ The confusion matrices were provided for four different models: Logistic Regress
 After analyzing the confusion matrices, evaluation metrics such as accuracy, precision, recall, and F1-score were calculated for each model. The accuracy represents the ratio of correct predictions to the total number of samples. Precision measures the percentage of correct positive predictions out of all positive predictions made by the model. Recall measures the percentage of true positive predictions out of all actual positive samples. The F1-score is a harmonic mean of precision and recall.
 
 For Logistic Regression:
+
   <img width="294" alt="image" src="confusion_matrix/LR_cm.jpeg">
   
   Accuracy = (11+31)/(11+17+1+31) = 0.73
@@ -320,6 +321,7 @@ For Logistic Regression:
   Recall = 11/(11+17) = 0.39
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.54
 For SVM:
+
   <img width="294" alt="image" src="confusion_matrix/SVM_cm.jpeg">
   
   Accuracy = (12+31)/(12+16+1+31) = 0.75
@@ -327,6 +329,7 @@ For SVM:
   Recall = 12/(12+16) = 0.43
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.58
 For Decision Tree:
+
   <img width="294" alt="image" src="confusion_matrix/DT_cm.jpeg">
   
   Accuracy = (19+27)/(19+9+5+27) = 0.78
@@ -334,6 +337,7 @@ For Decision Tree:
   Recall = 19/(19+9) = 0.68
   F1-score = 2 * (precision * recall) / (precision + recall) = 0.73
 For Random Forest:
+
   <img width="294" alt="image" src="confusion_matrix/RF_cm.jpeg">
   
   Accuracy = (17+30)/(17+11+2+30) = 0.81
