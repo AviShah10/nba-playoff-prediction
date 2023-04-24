@@ -127,7 +127,7 @@ west_2022_DT_cm = confusion_matrix(west_2022_DT_KT, west_2022_DT_Pred)
 # Creating the final confusion matrix for the logistic regression model. 
 DT_cm = east_2021_DT_cm + west_2021_DT_cm + east_2022_DT_cm + west_2022_DT_cm
 # Creating a visualisation for the confusion matrix for the model. 
-sns.heatmap(DT_cm, annot=True, cmap="PuBu")
+sns.heatmap(DT_cm, annot=True, cmap="Greys")
 plt.title("Confusion Matrix for Decision Tree Model (2021 & 2022)")
 plt.savefig("./confusion_matrix/DT_cm.jpeg")
 plt.show()
