@@ -306,6 +306,39 @@ In general, the feature correlation matrix helped narrow down the features that 
 
 <img width="1200" alt="image" src="correlation_matrix.jpeg" height="400">
 
+### Confusion Matrix
+
+The confusion matrices were provided for four different models: Logistic Regression, SVM, Decision Tree, and Random Forest. Each matrix showed the performance of the model in predicting whether a team would make the playoffs or not, based on the known truth (actual results) for the years 2021 and 2022.
+
+After analyzing the confusion matrices, evaluation metrics such as accuracy, precision, recall, and F1-score were calculated for each model. The accuracy represents the ratio of correct predictions to the total number of samples. Precision measures the percentage of correct positive predictions out of all positive predictions made by the model. Recall measures the percentage of true positive predictions out of all actual positive samples. The F1-score is a harmonic mean of precision and recall.
+
+For Logistic Regression:
+  <img width="294" alt="image" src="confusion_matrix/LR_cm.jpeg">
+  Accuracy = (11+31)/(11+17+1+31) = 0.73
+  Precision = 11/(11+1) = 0.92
+  Recall = 11/(11+17) = 0.39
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.54
+For SVM:
+  <img width="294" alt="image" src="confusion_matrix/SVM_cm.jpeg">
+  Accuracy = (12+31)/(12+16+1+31) = 0.75
+  Precision = 12/(12+1) = 0.92
+  Recall = 12/(12+16) = 0.43
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.58
+For Decision Tree:
+  <img width="294" alt="image" src="confusion_matrix/DT_cm.jpeg">
+  Accuracy = (19+27)/(19+9+5+27) = 0.78
+  Precision = 19/(19+5) = 0.79
+  Recall = 19/(19+9) = 0.68
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.73
+For Random Forest:
+  <img width="294" alt="image" src="confusion_matrix/RF_cm.jpeg">
+  Accuracy = (17+30)/(17+11+2+30) = 0.81
+  Precision = 17/(17+2) = 0.89
+  Recall = 17/(17+11) = 0.61
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.72
+  
+Based on the calculated metrics, the Random Forest model showed the best performance with the highest accuracy, precision, and F1-score. Therefore, it can be concluded that the Random Forest model is the best model to use in predicting whether a team would make the playoffs or not.
+
 ### Future Work
 
 To further improve our existing models, we would like to use different sets of features when training and testing. Currently, we are only testing our models with all features as mentioned above. We would like to use feature reduction algorithms to reduce features that do not have a great impact on a team's chances of making the playoffs halfway into the season. For example, one feature that may not have an impact on a team’s chances of making the playoffs is the “MATCHUP” feature which calculates the ratio of home to away games that a team has played. This ratio is largely consistent for all teams throughout the season and is not likely to be a factor that we need to include in our models.
