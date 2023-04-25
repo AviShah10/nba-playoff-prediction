@@ -385,6 +385,7 @@ For Random Forest:
 Based on the calculated metrics, the Random Forest model showed the best performance with the highest accuracy, precision, and F1-score. Therefore, it can be concluded that the Random Forest model is the best model to use in predicting whether a team would make the playoffs or not.
 
 Overall Results:
+
 <img width="294" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">
 <img width="294" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">
 
