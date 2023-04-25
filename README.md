@@ -237,6 +237,11 @@ To further improve our existing models, we would like to use different sets of f
 
 We also would like to build a neural network in the future due to the ability of a neural network to capture more abstract correlations between features. Predicting the NBA Playoffs has proven to be a difficult task, so the use of a neural network and tuning hyperparameters could result in a more accurate model for predicting playoff teams. Neural networks also have more flexibility with parameters, which means we can use our existing features combined with more advanced statistics to produce a model with higher accuracy.
 
+
+## Youtube Link to Presentation:
+
+https://youtu.be/iSpHtjAUCjs 
+
 ## Scholarly References:
 
 Kohli, Ikjyot Singh. “Finding Common Characteristics among NBA Playoff Teams: A Machine Learning Approach.” SSRN Electronic Journal, 2016, https://doi.org/10.2139/ssrn.2764396.
