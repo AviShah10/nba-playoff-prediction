@@ -210,6 +210,7 @@ Random Forest:
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png"> -->
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png"> -->
 
+From the results shown above, each model predicted whether a team would make playoffs marked with a 1 = make playoffs, 0 = miss playoffs. These results were compared with the actual results. Some models predicted more teams than were possible to make the playoffs (8), due to the model having multiple teams with a probability that exceeded 50% chance of making the posteseason.
 
 ### Discussion
 
@@ -225,9 +226,9 @@ Our best Decision Tree models were the Western Conference models and the worst m
 
 When initially creating Decision Tree models, we did not tune any hyperparameters such as max_depth, max_features, min_samples_leaf, etc. which led to poor results for all Decision Tree models. Thus, we used the GridSearchCV module from scikit-learn to cross-validate the most optimal set of hyperparameters for each model (for each conference and season). We created a dictionary of hyperparameters to choose from for the max_depth, max_features, and min_samples_leaf hyperparameters. We then created a GridSearchCV object with set fields including a Decision Tree model, the dictionary of hyperparameters, the cross-validation splitting strategy, and the scoring strategy. After fitting the GridSearchCV object with our training data, we determined the optimal set of hyperparameters and then created a new DecisionTreeClassifier object with the new optimal hyperparameters set. Each conference and each season called for a different set of optimal hyperparameters, but each model was improved in terms of test accuracy score.
 
-Overall, the best performing models were the Random Forest models for both the 2021 and 2022 seasons. The training and testing accuracies were both greater than 0.85 for both of these models. Decision Trees and SVM also had decent results, with SVM having the least overfitting issues. Logistic regression performed decently, but was consistently lower in testing data.
+Overall, the best performing models were the Random Forest models for both the 2021 and 2022 seasons. The training and testing accuracies were both greater than 0.85 for both of these models. Decision Trees and SVM also had decent results, with SVM having the least overfitting issues, since the difference between testing and training scores was the smallest, and testing scores often overperformed. Logistic regression performed decently, but was consistently lower in testing data.
 
-Overall, the top two features across all models for each season were high WLPCT and high PM ratio. This both makes sense intuitively and also matches the analysis from our visualizations of the WLPCT and PM statistics. Teams with above 0.500 WLPCT and a positive PM ratio often make the playoffs while teams with the opposite tend to miss the playoffs. Other important features include high FGPCT, high STL, low TOV, and high FGA. This also matches the analysis from our visualizations as we see that teams with high FGPCT and FGA and better defensive statistics are more likely to make the playoffs.
+Overall, the top two features across all models for each season were high WLPCT and high PM ratio. This both makes sense intuitively and also matches the analysis from our visualizations of the WLPCT and PM statistics as well as the correlation matrix. Teams with above 0.500 WLPCT and a positive PM ratio often make the playoffs while teams with the opposite tend to miss the playoffs. Other important features include high FGPCT, high STL, low TOV, and high FGA. This also matches the analysis from our visualizations as we see that teams with high FGPCT and FGA and better defensive statistics are more likely to make the playoffs.
 
 For all models, we also scaled and normalized our feature data, which made each performance statistic and feature normalized and comparable across each season. To scale and normalize our dataset, we used the StandardScaler object from scikit-learn and then used the fit_transform and normalize functions to scale and normalize the data. Before we scaled and normalized the data, our model performance was weaker with respect to test accuracy scores, so adding this data transformation was helpful across all models.
 
@@ -256,12 +257,16 @@ Overall, the Random Forest Classifier and Decision Tree Classifier models most l
 
 To further improve our existing models, we would like to use different sets of features when training and testing. Currently, we are only testing our models with all features as mentioned above. We would like to include other advanced statistics that are not tracked in the Kaggle dataset that we chose to get all of our data from. The NBA tracks advanced statistics such as offensive rating (OFFRTG), defensive rating (DEFRTG), effective field-goal percentage (eFG%), true shooting percentage (TS%), and points per possession (PPP). These statistics are computed through several calculations that take into account the different statistics that are normally kept track of, like the features used in our project. These statistics may lead to more accurate algorithms because they scale and normalize simple statistics that are optimal across the NBA. This would give us more features to test our models on and give us the ability to remove more features that do not have any correlation to a team’s playoff chances.
 
+We also want to integrate non-statistical factors in playoff success, such as player-specific information due to midseason trades, MVP votegetters, All star players, and recent momentum to see how this can impact playoff success.
+
+We also may switch from a probability threshold prediction basis to one of taking the top 8 teams' likelihoods, as this would avoid our issue of some models predicting more or less playoff teams than is possible.
+
 We also would like to build a neural network in the future due to the ability of a neural network to capture more abstract correlations between features. Predicting the NBA Playoffs has proven to be a difficult task, so the use of a neural network and tuning hyperparameters could result in a more accurate model for predicting playoff teams. Neural networks also have more flexibility with parameters, which means we can use our existing features combined with more advanced statistics to produce a model with higher accuracy.
 
 
 ## Youtube Link to Presentation:
 
-https://youtu.be/iSpHtjAUCjs 
+ https://youtu.be/1txURXwxewM
 
 ## Scholarly References:
 
@@ -274,7 +279,7 @@ Wang, Jingru, and Qishi Fan. “Application of Machine Learning on NBA Data Sets
 
 ## Contributions
 
-Samuel: Was in charge of later data cleaning and processing, such as troubleshooting issues with conferences/team relocations, averaging the teams' midseason stats, and reshaping to be compatible with the learning models. Helped with the implementation of the models by fixing any errors that could be dealt with on the data side such as mismatching rows, incorrect labeling, etc. and contributed in writing the 'Data Collection' and 'Methods' sections of this report.
+Samuel: Was in charge of later data cleaning and processing, such as troubleshooting issues with conferences/team relocations, averaging the teams' midseason stats, and reshaping to be compatible with the learning models. Helped with the implementation of the models by fixing any errors that could be dealt with on the data side such as mismatching rows, incorrect labeling, etc. and contributed in writing the 'Data Collection' and 'Methods' sections of this report. Also helped with organizing the results for each of the modles with regards to the successes and filures in predicting playoff outcomes. Helped in analyzing code and converting files to notebook files and with the presentation recording.
 
 Divyesh: Was in charge of the early data cleaning and processing. Experimented different techniques of cleaning ans storing data: by year or by team. Parsed through the game.csv file and took the 2000-2022 seasons and split into each team's games. Also helped with the creation and debugging of SVM and logistic regression models. 
 
