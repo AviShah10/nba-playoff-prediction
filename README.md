@@ -62,16 +62,17 @@ In the Kaggle dataset, we had a multi-step process for creating the statistical 
   - Plus-minus points differential (PM)
 
 #### Feature Selection
-We experimented with some backwards feature selection, particularly by removing some features that we believed to be less relevant (i.e. 'TEAM', 'YEAR', and 'MATCHUP' ratio, although we re-included 'MATCHUP') in order to see if it led to better results. We plan in the coming weeks to continue with backwards feature selection using research to determine what statistics are less relevant. We also plan to expand to include some additional features, using advanced metrics such as true shooting percentage, defensive efficience, etc. to see if those may also help with our model performance.
+
+We experimented with some backwards feature selection, particularly by removing some features that we believed to be less relevant (i.e. 'TEAM', 'YEAR', and 'MATCHUP' ratio, although we re-included 'MATCHUP') in order to see if it led to better results. We also used Principle Component Analysis (PCA) on our dataset for diminsionality reduction on our selected feature set.
 
 
 ### Training Models
 
-Thus far, we have created two models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model.
+We have created four supervised learning models for predicting which NBA teams will be making the playoffs for any given season: a logistic regression model and a support vector machine (SVM) model, a Random Forest Classifier model, and a Decision Tree Classifier model.
 
-For both our logistic regression and SVM models, we proceeded with the same following steps. We used the mid-season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the mid-season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively. 
+For all four of our supervised learning models, we proceeded with the same following steps. We used the mid-season averages for each team from the years 2000 (1999-2020 season) to 2020 (2019-2020 season) as the training data. We used the mid-season averages for each team for the 2021 and 2022 seasons as training data for predicting the 2021 and 2022 playoffs, respectively.
 
-So far, we have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
+We have ran the models on all features in our dataset including WLPCT, MATCHUP, FGM, FGA, FGPCT, FG3M, FG3A, FG3PCT, FTM, FTA, FTPCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF, PTS, PM. We omitted the TEAM and YEAR features because they do not have an impact on the performance of the team itself.
 
 
 ## Results and Discussion:
@@ -301,6 +302,8 @@ The best performing models were the Random Forest models for both the 2021 and 2
 When initially creating Decision Tree models, we did not tune any hyperparameters such as max_depth, max_features, min_samples_leaf, etc. which led to poor results for all Decision Tree models. Thus, we used the GridSearchCV module from scikit-learn to cross-validate the most optimal set of hyperparameters for each model (for each conference and season). We created a dictionary of hyperparameters to choose from for the max_depth, max_features, and min_samples_leaf hyperparameters. We then created a GridSearchCV object with set fields including a Decision Tree model, the dictionary of hyperparameters, the cross-validation splitting strategy, and the scoring strategy. After fitting the GridSearchCV object with our training data, we determined the optimal set of hyperparameters and then created a new DecisionTreeClassifier object with the new optimal hyperparameters set. Each conference and each season called for a different set of optimal hyperparameters, but each model was improved in terms of test accuracy score.
 
 For all models, we also scaled and normalized our feature data, which made each performance statistic and feature normalized and comparable across each season. To scale and normalize our dataset, we used the StandardScaler object from scikit-learn and then used the fit_transform and normalize functions to scale and normalize the data. Before we scaled and normalized the data, our model performance was weaker with respect to test accuracy scores, so adding this data transformation was helpful across all models.
+
+We tried using PCA for dimensionality reduction on all of our models to reduce features from our dataset, but the models run with PCA all had worse testing and training accuracy scores. We initialized a PCA object with assigning a value for the `n_components` value equal to 0.95, which means that PCA will select the optimal number of components such that the 95% of the variance in the data is preserved.
 
 #### Model Comparison
 
