@@ -252,13 +252,6 @@ Overall, the best models based on our confusion matrices were the Random Forest 
 
 Overall, the Random Forest Classifier and Decision Tree Classifier models most likely performed better than the Logistic Regression and Support Vector Machine models because of the non-linear relationships between most of the features in our dataset. Predicting which teams make the playoffs for any given conference in any given season is difficult because each conference has different characteristics and each team’s success is different by conference and season. Due to this non-linearity across seasons and conferences, Random Forest and Decision Tree classifiers generally perform better because they can capture such non-linear relationships between features. This happens through partitioning the different sets of features into smaller regions and fitting a simple classification model to each region. On the other hand, Logistic Regression and Support Vector Machine models assume a linear relationship which is why the training data from the 2000-2020 seasons may not necessarily correspond linearly to the feature sets for the 2021 and 2022 seasons.
 
-Overall Results:
-
-<img width="294" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">
-<img width="294" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">
-
-In Summary, these are our results regarding our 4 models in reference to the actual values. 
-
 ### Future Work
 
 To further improve our existing models, we would like to use different sets of features when training and testing. Currently, we are only testing our models with all features as mentioned above. We would like to include other advanced statistics that are not tracked in the Kaggle dataset that we chose to get all of our data from. The NBA tracks advanced statistics such as offensive rating (OFFRTG), defensive rating (DEFRTG), effective field-goal percentage (eFG%), true shooting percentage (TS%), and points per possession (PPP). These statistics are computed through several calculations that take into account the different statistics that are normally kept track of, like the features used in our project. These statistics may lead to more accurate algorithms because they scale and normalize simple statistics that are optimal across the NBA. This would give us more features to test our models on and give us the ability to remove more features that do not have any correlation to a team’s playoff chances.
