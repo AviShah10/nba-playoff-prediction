@@ -303,7 +303,9 @@ When initially creating Decision Tree models, we did not tune any hyperparameter
 
 For all models, we also scaled and normalized our feature data, which made each performance statistic and feature normalized and comparable across each season. To scale and normalize our dataset, we used the StandardScaler object from scikit-learn and then used the fit_transform and normalize functions to scale and normalize the data. Before we scaled and normalized the data, our model performance was weaker with respect to test accuracy scores, so adding this data transformation was helpful across all models.
 
-We tried using PCA for dimensionality reduction on all of our models to reduce features from our dataset, but the models run with PCA all had worse testing and training accuracy scores. We initialized a PCA object with assigning a value for the `n_components` value equal to 0.95, which means that PCA will select the optimal number of components such that the 95% of the variance in the data is preserved.
+We tried using PCA for dimensionality reduction on all of our models to reduce features from our dataset, but the models run with PCA all had worse testing and training accuracy scores. We initialized a PCA object with assigning a value for the `n_components` value equal to 0.95, which means that PCA will select the optimal number of components such that the 95% of the variance in the data is preserved. Below is a plot for vizualizing the explained variance ratio of the principle components left after running PCA on our data:
+
+<img width="350" alt="image" src="confusion_matrix/PCA.png">
 
 #### Model Comparison
 
