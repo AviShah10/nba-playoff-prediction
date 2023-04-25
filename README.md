@@ -122,7 +122,7 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 <img width="294" alt="image" src="https://user-images.githubusercontent.com/126113216/229229752-95b20e54-b152-4676-b6b9-7bb664876fa5.png">
 
-### Model Results
+### Results
 
 #### Logistic Regression Model for 2021 Eastern Conference
 
@@ -288,13 +288,30 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 |3   |HOU        |0           |0  |1.000000e-07|
 |9   |OKC        |0           |0  |1.000000e-07|
 
-### Model Analysis
+### Discussion
 
-The best performing models were the SVM models for both the 2021 and 2022 seasons for the Western Conference. The training and testing accuracies were both greater than 0.85 for both of these models. The best performing logistic regression model was for predicting the Western Conference playoffs in the 2021 season, with training and testing accuracies greater than 0.80 for the model. We are unsure as to why the models for predicting the Western Conference playoffs are more accurate than the Eastern Conference playoffs, and it is something we will look into for the final report.
+The best performing models were the SVM models for both the 2021 and 2022 seasons for the Western Conference. The training and testing accuracies were both greater than 0.85 for both of these models. The best performing logistic regression model was for predicting the Western Conference playoffs in the 2021 season, with training and testing accuracies greater than 0.80 for the model.
 
 We also calculated what the most important features were in predicting the playoffs for each conference and each season and the top two features across all models for each season were high WLPCT and high PM ratio. This both makes sense intuitively and also matches the analysis from our visualizations of the WLPCT and PM statistics. Teams with above 0.500 WLPCT and a positive PM ratio often make the playoffs while teams with the opposite tend to miss the playoffs. Other important features include high FGPCT, high STL, low TOV, and high FGA. This also matches the analysis from our visualizations as we see that teams with high FGPCT and FGA and better defensive statistics are more likely to make the playoffs.
 
-The rest of our logistic regression and SVM models predict more playoff teams than there should be due to overfitting. We know that our models are overfitting the playoff predictions because the calculated training accuracy scores are greater than the testing accuracy scores for our models. In order to improve on the accuracy of our models, we plan on testing out different splits of training and testing data. So far, we have only trained our models on years 2000-2020 and tested our models on 2021 and 2022, and these splits may be too large. We plan on testing other percentages with closer splits for training and testing data using scikit-learn’s “train_test_split” function. We could also potentially add more seasons to our dataset for more data to train and test our models with. However, this can potentially be detrimental to the accuracy of our models because older seasons of the NBA, especially before 2000, have different numbers of teams and different play styles, so the predictions might not be consistent.
+The rest of our logistic regression and SVM models predict more playoff teams than there should be due to overfitting. We know that our models are overfitting the playoff predictions because the calculated training accuracy scores are greater than the testing accuracy scores for our models. This overfitting is likely due to the fact that our different splits of training and testing data may be too large. We trained our models on years 2000-2020 and tested our models on 2021 and 2022, and these splits may be too large. With the addition of more seasons, we could be able to expand our training and testing data splits to be larger and eliminate overfitting.
+
+The best performing models were the Random Forest models for both the 2021 and 2022 seasons in the Eastern and Western Conferences. The Random Forest model for the 2022 Western Conference had a testing accuracy score of approximately 0.80, which was the worst case out of all of the Random Forest models. The Random Forest model for the 2022 Eastern Conference and the 2021 Eastern and Western conference had testing accuracy scores of greater than 0.87, with the best model having a testing accuracy score of approximately 0.93.
+
+When initially creating Decision Tree models, we did not tune any hyperparameters such as max_depth, max_features, min_samples_leaf, etc. which led to poor results for all Decision Tree models. Thus, we used the GridSearchCV module from scikit-learn to cross-validate the most optimal set of hyperparameters for each model (for each conference and season). We created a dictionary of hyperparameters to choose from for the max_depth, max_features, and min_samples_leaf hyperparameters. We then created a GridSearchCV object with set fields including a Decision Tree model, the dictionary of hyperparameters, the cross-validation splitting strategy, and the scoring strategy. After fitting the GridSearchCV object with our training data, we determined the optimal set of hyperparameters and then created a new DecisionTreeClassifier object with the new optimal hyperparameters set. Each conference and each season called for a different set of optimal hyperparameters, but each model was improved in terms of test accuracy score.
+
+For all models, we also scaled and normalized our feature data, which made each performance statistic and feature normalized and comparable across each season. To scale and normalize our dataset, we used the StandardScaler object from scikit-learn and then used the fit_transform and normalize functions to scale and normalize the data. Before we scaled and normalized the data, our model performance was weaker with respect to test accuracy scores, so adding this data transformation was helpful across all models.
+
+#### Model Comparison
+
+|Algorithm|Accuracy  |
+|-------------|-------------|
+|Logistic Regression   |0.72        |
+|Support Vector Machine  |0.80        |
+|Random Forest Classifier  |0.87        |
+|Decision Tree Classifier   |0.80        |
+
+Overall, the Random Forest Classifier and Decision Tree Classifier models most likely performed better than the Logistic Regression and Support Vector Machine models because of the non-linear relationships between most of the features in our dataset. Predicting which teams make the playoffs for any given conference in any given season is difficult because each conference has different characteristics and each team’s success is different by conference and season. Due to this non-linearity across seasons and conferences, Random Forest and Decision Tree classifiers generally perform better because they can capture such non-linear relationships between features. This happens through partitioning the different sets of features into smaller regions and fitting a simple classification model to each region. On the other hand, Logistic Regression and Support Vector Machine models assume a linear relationship which is why the training data from the 2000-2020 seasons may not necessarily correspond linearly to the feature sets for the 2021 and 2022 seasons.
 
 ### Feature Correlation Matrix
 
