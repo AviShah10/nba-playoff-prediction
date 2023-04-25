@@ -127,37 +127,25 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 #### Logistic Regression
 
-2021 Results:
+<img width="350" alt="image" src="results/LRResults.png">
 
-Eastern Conference
-- Test Accuracy Score: 0.667 (Testing: 0.807)
+#### Support Vector Machine
 
-Western Conference
-- Test Accuracy Score: 0.8 (Testing: 0.851) 
+<img width="350" alt="image" src="results/SVMResults.png">
 
-Most Important Features
-- +PM ratio
-- +WLPCT
-- +FGPCT
+#### Random Forest Classifier
 
-2022 Results:
+<img width="350" alt="image" src="results/RFResults.png">
 
-Eastern Conference
-- Test Accuracy Score: 0.667 (Testing: 0.807)
+#### Decision Tree Classifier
 
-Western Conference
-- Test Accuracy Score: 0.733 (Testing: 0.851) 
-
-Most Important Features
-- +PM ratio
-- +WLPCT
-- +FGPCT
+<img width="350" alt="image" src="results/DTResults.png">
 
 
 #### Playoff Predictions
 
-![Screenshot 2023-04-25 004744](https://user-images.githubusercontent.com/55326680/234177384-6464fb04-68b9-45e3-a8fe-4eb8275a3425.png)
-![Screenshot 2023-04-25 004830](https://user-images.githubusercontent.com/55326680/234177369-6717a0c1-f303-45bc-b9e3-067d852ee5f7.png)
+<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">
+<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">
 
 
 ### Discussion
