@@ -125,6 +125,9 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 ### Results
 
+![Screenshot 2023-04-25 004744](https://user-images.githubusercontent.com/55326680/234177384-6464fb04-68b9-45e3-a8fe-4eb8275a3425.png)
+![Screenshot 2023-04-25 004830](https://user-images.githubusercontent.com/55326680/234177369-6717a0c1-f303-45bc-b9e3-067d852ee5f7.png)
+
 #### Logistic Regression Model for 2021 Eastern Conference
 
 |NUMBER| TEAM | PLAYOFF | PREDICTION | PROBABILITY|
