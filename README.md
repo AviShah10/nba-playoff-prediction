@@ -157,6 +157,8 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 |-------------|-------------|
 |<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">   |<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">        |
 
+From the results shown above, each model predicted whether a team would make playoffs marked with a 1 = make playoffs, 0 = miss playoffs. These results were compared with the actual results. Some models predicted more teams than were possible to make the playoffs (8), due to the model having multiple teams with a probability that exceeded 50% chance of making the posteseason.
+
 #### Confusion Matrices
 
 Logistic Regression:
@@ -209,8 +211,6 @@ Random Forest:
 
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png"> -->
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png"> -->
-
-From the results shown above, each model predicted whether a team would make playoffs marked with a 1 = make playoffs, 0 = miss playoffs. These results were compared with the actual results. Some models predicted more teams than were possible to make the playoffs (8), due to the model having multiple teams with a probability that exceeded 50% chance of making the posteseason.
 
 ### Discussion
 
