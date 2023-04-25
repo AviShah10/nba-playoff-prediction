@@ -131,8 +131,10 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 Eastern Conference
 - Test Accuracy Score: 0.667 (Testing: 0.807)
+
 Western Conference
 - Test Accuracy Score: 0.8 (Testing: 0.851) 
+
 Most Important Features
 - +PM ratio
 - +WLPCT
@@ -141,13 +143,16 @@ Most Important Features
 2022 Results:
 
 Eastern Conference
-- Test Accuracy Score: 0.667 (Testing: 0.807) 
+- Test Accuracy Score: 0.667 (Testing: 0.807)
+
 Western Conference
-- Test Accuracy Score: 0.733 (Testing: 0.851)
+- Test Accuracy Score: 0.733 (Testing: 0.851) 
+
 Most Important Features
 - +PM ratio
 - +WLPCT
 - +FGPCT
+
 
 #### Playoff Predictions
 
