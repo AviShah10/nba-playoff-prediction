@@ -1,4 +1,4 @@
-# NBA Playoff Prediction Algorithm (MIDTERM)
+# NBA Playoff Prediction Algorithm
 
 
 ## Introduction/Background:
@@ -77,6 +77,16 @@ We have ran the models on all features in our dataset including WLPCT, MATCHUP, 
 
 ## Results and Discussion:
 
+### Feature Correlation Matrix
+
+To initially visualize our feature set, we created a feature correlation matrix that quantifies the relationship between the different features. It quantifies the strength of the relationship between various features and the direction of their relation (positive or negative). Our main objective to construct the matrix is to find the features that are affecting the chance of a team making the playoffs, thus, our target variable will be playoff, telling us whether the team made the playoff or not.
+
+The column we will be focusing on is the one that has been highlighted with the green box, which looks at the correlation between our feature set and whether or not a team makes the playoffs. There are certain features that are positively correlated with the playoff target variable, including the PM, WLPCT, and FGPCT feature. This means that a higher PM ratio, higher WLPCT, and higher FGPCT are positively correlated with the chances a team has to make the playoffs. On the other hand, there are other features that are negatively correlated with the playoff target variable, including TOV. This means that a lower TOV rate also increases a team's chances of making the playoffs.
+
+In general, the feature correlation matrix helped narrow down the features that we would focus on, simplifying some of our models and helped us gain a greater understanding about the underlying patterns in the dataset.
+
+<img width="1200" alt="image" src="correlation_matrix.jpeg" height="400">
+
 ### Visualizations
 
 While creating our dataset we decided to run some visualizations to get an understanding of how the data is trending. Our next couple visualizations helps show a difference in many key features from playoff bound teams and non-playoff bound teams. 
@@ -118,7 +128,6 @@ We wanted to see how Plus-minus points differential (PM) and Win-loss percentage
 <img width="263" alt="image" src="https://user-images.githubusercontent.com/126113216/229229403-6f186943-2da9-404e-8d91-abfa16a7fecc.png">
 
 
-
 In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see that teams who did not make it tend to have negative WLPCT & PM and a lower FGPCT on the left of the chart, while teams who did make it tend to have positive WLPCT & PM and a higher FGPCT on the right of the chart. These are our top 3 indicators of playoff attainment success.
 
 <img width="294" alt="image" src="https://user-images.githubusercontent.com/126113216/229229752-95b20e54-b152-4676-b6b9-7bb664876fa5.png">
@@ -154,21 +163,27 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 ### Discussion
 
-The best performing models were the Random Forest models for both the 2021 and 2022 seasons. The training and testing accuracies were both greater than 0.85 for both of these models. Decision Trees and SVM also had decent results, with SVM having the least overfitting issues. Logistic regression performed decently, but was consistently lower in testing data.
+Our best logistic regression model was the 2021 Western Conference logistic regression model and the worst models were the 2021 and 2021 Eastern Conference models. The most important features were positive PM ratio, higher WLPCT, and higher FGPCT, all of which match the results from our data vizualizations and feature correlation matrix.
 
-We also calculated what the most important features were in predicting the playoffs for each conference and each season and the top two features across all models for each season were high WLPCT and high PM ratio. This both makes sense intuitively and also matches the analysis from our visualizations of the WLPCT and PM statistics. Teams with above 0.500 WLPCT and a positive PM ratio often make the playoffs while teams with the opposite tend to miss the playoffs. Other important features include high FGPCT, high STL, low TOV, and high FGA. This also matches the analysis from our visualizations as we see that teams with high FGPCT and FGA and better defensive statistics are more likely to make the playoffs.
+Our best SVM models were the 2021 and 2022 Western Conference SVM models and the worst model was the 2021 Eastern Conference model. In our SVM models, one interesting thing we noticed is that after a positive PM ratio and higher WLPCT, the next important features were different stats including a negative TOV rate and a positive STL rate. These defensive statistic trends also match up with our initial data visualizations and our feature correlation matrix.
 
 The rest of our logistic regression and SVM models predict more playoff teams than there should be due to the algorithms basing playoff predictions off of a probability threshold (> 0.5). As a result, our algorithm is often less accurate than it could be than if it were to take the top 8 probabilities, but we wanted to display the actual probabilities and decisionmaking of our algorithm. We also know that our models are often overfitting the playoff predictions because the calculated training accuracy scores are greater than the testing accuracy scores for our models. This overfitting is likely due to the fact that our different splits of training and testing data may be too large. We trained our models on years 2000-2020 and tested our models on 2021 and 2022, and these splits may be too large. With the addition of more seasons, we could be able to expand our training and testing data splits to be larger and eliminate overfitting.
 
-The best performing models were the Random Forest models for both the 2021 and 2022 seasons in the Eastern and Western Conferences. The Random Forest model for the 2022 Western Conference had a testing accuracy score of approximately 0.80, which was the worst case out of all of the Random Forest models. The Random Forest model for the 2022 Eastern Conference and the 2021 Eastern and Western conference had testing accuracy scores of greater than 0.87, with the best model having a testing accuracy score of approximately 0.93.
+Our best Random Forest model was the 2021 Western Conference model and the worst models were the 2021 and 2022 Eastern Conference models. In addition to the normal positive PM ratio and higher WLPCT, higher FGPCT and higher FG3PCT were also calculated to be the most important features. In our initial data visualizations, we noticed that 3 point shooting has drastically increased in the recent NBA seasons which is confirmed by our Random Forest Models.
+
+Our best Decision Tree models were the Western Conference models and the worst models were the Eastern Conference models. Across all four models, we noticed that test accuracies for the Eastern Conference have generally been worse than for the Western Conference. We believe that this is likely due to the fact that the Eastern Conference is generally more balanced and there is less entropy compared to the Western Conference, making it harder to predict.
 
 When initially creating Decision Tree models, we did not tune any hyperparameters such as max_depth, max_features, min_samples_leaf, etc. which led to poor results for all Decision Tree models. Thus, we used the GridSearchCV module from scikit-learn to cross-validate the most optimal set of hyperparameters for each model (for each conference and season). We created a dictionary of hyperparameters to choose from for the max_depth, max_features, and min_samples_leaf hyperparameters. We then created a GridSearchCV object with set fields including a Decision Tree model, the dictionary of hyperparameters, the cross-validation splitting strategy, and the scoring strategy. After fitting the GridSearchCV object with our training data, we determined the optimal set of hyperparameters and then created a new DecisionTreeClassifier object with the new optimal hyperparameters set. Each conference and each season called for a different set of optimal hyperparameters, but each model was improved in terms of test accuracy score.
+
+Overall, the best performing models were the Random Forest models for both the 2021 and 2022 seasons. The training and testing accuracies were both greater than 0.85 for both of these models. Decision Trees and SVM also had decent results, with SVM having the least overfitting issues. Logistic regression performed decently, but was consistently lower in testing data.
+
+Overall, the top two features across all models for each season were high WLPCT and high PM ratio. This both makes sense intuitively and also matches the analysis from our visualizations of the WLPCT and PM statistics. Teams with above 0.500 WLPCT and a positive PM ratio often make the playoffs while teams with the opposite tend to miss the playoffs. Other important features include high FGPCT, high STL, low TOV, and high FGA. This also matches the analysis from our visualizations as we see that teams with high FGPCT and FGA and better defensive statistics are more likely to make the playoffs.
 
 For all models, we also scaled and normalized our feature data, which made each performance statistic and feature normalized and comparable across each season. To scale and normalize our dataset, we used the StandardScaler object from scikit-learn and then used the fit_transform and normalize functions to scale and normalize the data. Before we scaled and normalized the data, our model performance was weaker with respect to test accuracy scores, so adding this data transformation was helpful across all models.
 
 We tried using PCA for dimensionality reduction on all of our models to reduce features from our dataset, but the models run with PCA all had worse testing and training accuracy scores. We initialized a PCA object with assigning a value for the `n_components` value equal to 0.95, which means that PCA will select the optimal number of components such that the 95% of the variance in the data is preserved. Below is a plot for vizualizing the explained variance ratio of the principle components left after running PCA on our data:
 
-<img width="350" alt="image" src="confusion_matrix/PCA.png">
+<img width="600" alt="image" src="confusion_matrix/PCA.png">
 
 #### Model Comparison
 
@@ -181,15 +196,6 @@ We tried using PCA for dimensionality reduction on all of our models to reduce f
 
 Overall, the Random Forest Classifier and Decision Tree Classifier models most likely performed better than the Logistic Regression and Support Vector Machine models because of the non-linear relationships between most of the features in our dataset. Predicting which teams make the playoffs for any given conference in any given season is difficult because each conference has different characteristics and each team’s success is different by conference and season. Due to this non-linearity across seasons and conferences, Random Forest and Decision Tree classifiers generally perform better because they can capture such non-linear relationships between features. This happens through partitioning the different sets of features into smaller regions and fitting a simple classification model to each region. On the other hand, Logistic Regression and Support Vector Machine models assume a linear relationship which is why the training data from the 2000-2020 seasons may not necessarily correspond linearly to the feature sets for the 2021 and 2022 seasons.
 
-### Feature Correlation Matrix
-
-The correlation matrix tells us about the relationship between the different features in the dataset. It quantifies the strength of the relationship between various features and the direction of their relation (positive or negative). Our main objective to construct the matrix is to find the features that are affecting the chance of a team making the playoffs, thus, our target variable will be playoff, telling us whether the teeam made the playoff or not.
-
-To analyze our matrix, we set a threshold of 0.25 to show a fairly important relation between the feature and whetehr the team made the playoffs or not. The column that we will be focusing on has been highlighted with a box around it in light green. There are certain features that fall below the threshold: PF, TOV, OREB, FTA – indicating that these features do not have a very strong relation with the number of points scored by the team, and thus these features do not play a very crucial role in our models. On the other hand, there are other features like FGM, FGCPT, FGP3PCT, PM AND PTS which have a high positive relation with the number of points scored by a team, indicating that these are important features that we would like to focus our models around.
-
-In general, the feature correlation matrix helped narrow down the features that we would focus on, simplifying some of our models and helped us gain a greater understanding about the underlying patterns in the dataset.
-
-<img width="1200" alt="image" src="correlation_matrix.jpeg" height="400">
 
 ### Confusion Matrix
 
