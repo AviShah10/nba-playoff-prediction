@@ -10,30 +10,22 @@ import matplotlib.pyplot as plt
 #########################################
 
 # Loading the eastTrainingData.csv into a pandas dataframe
-eastStats = pd.read_csv('season_stats_2000to2022/eastTrainingData.csv', index_col=None)
+eastStats1 = pd.read_csv('./results/stats_east.csv', index_col=None)
+eastPlayoff = pd.read_csv("./results/playoff_east.csv", index_col=None)
+eastStats = pd.concat([eastStats1, eastPlayoff], axis=1)
 # Getting the name of all the columns in the dataframe. 
 eastColumnNames = eastStats.columns
-# Dropping the first column of the dataframe as it is not useful to us. 
-eastStats = eastStats.drop('Unnamed: 0.1', axis = 1)
-# Dropping the first column of the dataframe as  again it is not useful to us. 
-eastStats = eastStats.drop('Unnamed: 0', axis = 1)
-# Dropping the team name column as well, as this will not be used in the matrix. 
-eastStats = eastStats.drop('TEAM', axis = 1) 
 
 #########################################
 ## WEST CONFERENCE TRAINING DATA STATS ##
 #########################################
 
 # Loading the eastTrainingData.csv into a pandas dataframe
-westStats = pd.read_csv('season_stats_2000to2022/westTrainingData.csv', index_col=None)
+westStats1 = pd.read_csv('./results/stats_west.csv', index_col=None)
+westPlayoff = pd.read_csv("./results/playoff_west.csv", index_col=None)
+westStats = pd.concat([westStats1, westPlayoff], axis=1)
 # Getting the name of all the columns in the dataframe. 
 westColumnNames = westStats.columns
-# Dropping the first column of the dataframe as it is not useful to us. 
-westStats = westStats.drop('Unnamed: 0.1', axis = 1)
-# Dropping the first column of the dataframe as  again it is not useful to us. 
-westStats = westStats.drop('Unnamed: 0', axis = 1)
-# Dropping the team name column as well, as this will not be used in the matrix. 
-westStats = westStats.drop('TEAM', axis = 1) 
 
 #################################
 ## OVERALL TRAINING DATA STATS ##
