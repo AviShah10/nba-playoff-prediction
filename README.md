@@ -157,6 +157,56 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 |-------------|-------------|
 |<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">   |<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">        |
 
+#### Confusion Matrices
+
+Logistic Regression:
+
+  <img width="294" alt="image" src="confusion_matrix/LR_cm.jpeg">
+  
+  Accuracy = (11+31)/(11+17+1+31) = 0.73
+  
+  Precision = 11/(11+1) = 0.92
+  
+  Recall = 11/(11+17) = 0.39
+  
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.54
+  
+SVM:
+
+  <img width="294" alt="image" src="confusion_matrix/SVM_cm.jpeg">
+  
+  Accuracy = (12+31)/(12+16+1+31) = 0.75
+  
+  Precision = 12/(12+1) = 0.92
+  
+  Recall = 12/(12+16) = 0.43
+  
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.58
+  
+Decision Tree:
+
+  <img width="294" alt="image" src="confusion_matrix/DT_cm.jpeg">
+  
+  Accuracy = (19+27)/(19+9+5+27) = 0.78
+  
+  Precision = 19/(19+5) = 0.79
+  
+  Recall = 19/(19+9) = 0.68
+  
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.73
+  
+Random Forest:
+
+  <img width="294" alt="image" src="confusion_matrix/RF_cm.jpeg">
+  
+  Accuracy = (17+30)/(17+11+2+30) = 0.81
+  
+  Precision = 17/(17+2) = 0.89
+  
+  Recall = 17/(17+11) = 0.61
+  
+  F1-score = 2 * (precision * recall) / (precision + recall) = 0.72
+
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png"> -->
 <!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png"> -->
 
@@ -185,6 +235,12 @@ We tried using PCA for dimensionality reduction on all of our models to reduce f
 
 <img width="600" alt="image" src="confusion_matrix/PCA.png">
 
+For further analysis we created confusion matrices for all four different models: Logistic Regression, SVM, Decision Tree, and Random Forest. Each matrix showed the performance of the model in predicting whether a team would make the playoffs or not, based on the known truth (actual results) for the years 2021 and 2022.
+
+After analyzing the confusion matrices, evaluation metrics such as accuracy, precision, recall, and F1-score were calculated for each model. The accuracy represents the ratio of correct predictions to the total number of samples. Precision measures the percentage of correct positive predictions out of all positive predictions made by the model. Recall measures the percentage of true positive predictions out of all actual positive samples. The F1-score is a harmonic mean of precision and recall.
+
+Overall, the best models based on our confusion matrices were the Random Forest and Decision Tree classifier models with accuracy scores greater than 78% and F1-scores of greater than 73%. Another interesting trend we notices is that there were more false positives than false negatives, which is likely due to overfitting, especially for our logistic regression and SVM models.
+
 #### Model Comparison
 
 |Algorithm|Accuracy  |
@@ -195,63 +251,6 @@ We tried using PCA for dimensionality reduction on all of our models to reduce f
 |Decision Tree Classifier   |0.80        |
 
 Overall, the Random Forest Classifier and Decision Tree Classifier models most likely performed better than the Logistic Regression and Support Vector Machine models because of the non-linear relationships between most of the features in our dataset. Predicting which teams make the playoffs for any given conference in any given season is difficult because each conference has different characteristics and each team’s success is different by conference and season. Due to this non-linearity across seasons and conferences, Random Forest and Decision Tree classifiers generally perform better because they can capture such non-linear relationships between features. This happens through partitioning the different sets of features into smaller regions and fitting a simple classification model to each region. On the other hand, Logistic Regression and Support Vector Machine models assume a linear relationship which is why the training data from the 2000-2020 seasons may not necessarily correspond linearly to the feature sets for the 2021 and 2022 seasons.
-
-
-### Confusion Matrix
-
-The confusion matrices were provided for four different models: Logistic Regression, SVM, Decision Tree, and Random Forest. Each matrix showed the performance of the model in predicting whether a team would make the playoffs or not, based on the known truth (actual results) for the years 2021 and 2022.
-
-After analyzing the confusion matrices, evaluation metrics such as accuracy, precision, recall, and F1-score were calculated for each model. The accuracy represents the ratio of correct predictions to the total number of samples. Precision measures the percentage of correct positive predictions out of all positive predictions made by the model. Recall measures the percentage of true positive predictions out of all actual positive samples. The F1-score is a harmonic mean of precision and recall.
-
-For Logistic Regression:
-
-  <img width="294" alt="image" src="confusion_matrix/LR_cm.jpeg">
-  
-  Accuracy = (11+31)/(11+17+1+31) = 0.73
-  
-  Precision = 11/(11+1) = 0.92
-  
-  Recall = 11/(11+17) = 0.39
-  
-  F1-score = 2 * (precision * recall) / (precision + recall) = 0.54
-  
-For SVM:
-
-  <img width="294" alt="image" src="confusion_matrix/SVM_cm.jpeg">
-  
-  Accuracy = (12+31)/(12+16+1+31) = 0.75
-  
-  Precision = 12/(12+1) = 0.92
-  
-  Recall = 12/(12+16) = 0.43
-  
-  F1-score = 2 * (precision * recall) / (precision + recall) = 0.58
-  
-For Decision Tree:
-
-  <img width="294" alt="image" src="confusion_matrix/DT_cm.jpeg">
-  
-  Accuracy = (19+27)/(19+9+5+27) = 0.78
-  
-  Precision = 19/(19+5) = 0.79
-  
-  Recall = 19/(19+9) = 0.68
-  
-  F1-score = 2 * (precision * recall) / (precision + recall) = 0.73
-  
-For Random Forest:
-
-  <img width="294" alt="image" src="confusion_matrix/RF_cm.jpeg">
-  
-  Accuracy = (17+30)/(17+11+2+30) = 0.81
-  
-  Precision = 17/(17+2) = 0.89
-  
-  Recall = 17/(17+11) = 0.61
-  
-  F1-score = 2 * (precision * recall) / (precision + recall) = 0.72
-  
-Based on the calculated metrics, the Random Forest model showed the best performance with the highest accuracy, precision, and F1-score. Therefore, it can be concluded that the Random Forest model is the best model to use in predicting whether a team would make the playoffs or not.
 
 Overall Results:
 
