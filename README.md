@@ -127,25 +127,29 @@ In this plot, we compare 3 factors with eachother, WLPCT, PM & FGPCT.  We see th
 
 #### Logistic Regression
 
-<img width="350" alt="image" src="results/LRResults.png">
+<img width="800" alt="image" src="results/LRResults.png">
 
 #### Support Vector Machine
 
-<img width="350" alt="image" src="results/SVMResults.png">
+<img width="800" alt="image" src="results/SVMResults.png">
 
 #### Random Forest Classifier
 
-<img width="350" alt="image" src="results/RFResults.png">
+<img width="800" alt="image" src="results/RFResults.png">
 
 #### Decision Tree Classifier
 
-<img width="350" alt="image" src="results/DTResults.png">
+<img width="800" alt="image" src="results/DTResults.png">
 
 
 #### Playoff Predictions
 
-<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">
-<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">
+|2021 Predictions|2022 Predictions  |
+|-------------|-------------|
+|<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png">   |<img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png">        |
+
+<!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.49.36 PM.png"> -->
+<!-- <img width="500" alt="image" src="confusion_matrix/Screen Shot 2023-04-24 at 11.50.04 PM.png"> -->
 
 
 ### Discussion
